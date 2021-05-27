@@ -8,7 +8,7 @@ const Navbar = props => {
     return (
         <nav className={Styles.nav}>
             <div className={Styles.logo}>
-                <img src={logo} />
+                <img src={logo} alt={'logo'} />
                 <span>relix</span>
                 <span className={`yellow-font-color`}>.</span>
                 <span>club</span>
