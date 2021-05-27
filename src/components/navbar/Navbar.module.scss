@@ -1,0 +1,48 @@
+@import "./../../App.scss";
+
+.nav {
+    position: fixed;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: var(--navbar-padding-vertical) var(--section-padding-horizontal);
+
+    z-index: 99;
+    user-select: none;
+
+    .logo {
+        $font-size: calc(3.33vh * 2);
+        $font-size-alt: calc(1.87vw * 2);
+        font-size: min(calc(#{$font-size/2}), calc(#{$font-size-alt/2}));
+
+        font-family: "Halvar Breitschrift";
+        // font-size: xx-large;
+        font-weight: 700;
+
+        img {
+            width: 44px;
+            width: min(4.07vh, 2.29vw);
+            margin-right: 1.5rem;
+            margin-right: min(2.22vh, 1.24vw);
+            vertical-align: middle;
+        }
+    }
+    .links {
+        // font-size: 1.5rem;
+        $font-size: calc(2.22vh * 2);
+        $font-size-alt: calc(1.25vw * 2);
+        font-size: min(calc(#{$font-size/2}), calc(#{$font-size-alt/2}));
+
+        span + span {
+            margin-left: 5rem;
+            margin-left: min(7.4vh, 4.15vw);
+            // min(1.48vh, 0.83vw)
+        }
+    }
+}

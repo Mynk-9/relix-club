@@ -1,0 +1,43 @@
+// fonts
+@font-face {
+    font-family: "Poppins";
+    src: url("./assets/fonts/Poppins/Poppins-Regular.ttf");
+}
+@font-face {
+    font-family: "Halvar Breitschrift";
+    src: url("./assets/fonts/Halvar-Breitschrift/HalvarBreit-Rg.ttf");
+}
+
+// normalize
+* {
+    box-sizing: border-box;
+}
+
+// variables
+body {
+    --navbar-padding-vertical: 3rem;
+    --navbar-padding-vertical: min(4.44vh, 2.49vw);
+
+    --section-padding-horizontal: 9rem;
+    --section-padding-horizontal: min(13.32vh, 7.47vw);
+    --section-padding-vertical: 1rem;
+    --section-hero-padding-top: 9rem;
+}
+
+// body props
+body {
+    background-color: black;
+    color: white;
+
+    font-family: "Poppins";
+}
+
+// misc classes
+.yellow-font-color {
+    color: #ffe600;
+}
+
+// sass functions
+@function min($numbers...) {
+    @return m#{i}n(#{$numbers});
+}
