@@ -5,6 +5,39 @@
     padding: var(--section-padding-vertical) var(--section-padding-horizontal);
 
     background: radial-gradient(50% 50% at 50% 50%, #1e1f2c 0%, #000000 100%);
+
+    .content {
+        display: block;
+        --bottom-margin: min(4.17vh, 2.34vw);
+
+        .heading1 {
+            font-size: min(4.44vh, 2.5vw);
+            font-family: "Poppins-Semi-Bold";
+            text-align: center;
+            margin-bottom: var(--bottom-margin);
+        }
+        .heading2 {
+            font-size: fhdScaleMin(40); // 40px
+            font-family: "Poppins-Semi-Bold";
+            text-align: center;
+            margin-bottom: var(--bottom-margin);
+        }
+        .description {
+            // margin: 0 min(29.63vh, 16.67vw);
+            // margin: 0 10%;
+            font-size: min(2.78vh, 1.56vw);
+            text-align: center;
+            margin-bottom: var(--bottom-margin);
+        }
+        .horizontalScroll {
+            overflow-x: auto;
+            display: flex;
+            justify-content: space-between;
+            div + div {
+                margin-left: min(5.55vh, 3.125vw);
+            }
+        }
+    }
 }
 .heroSection {
     height: 100vh;
@@ -22,7 +55,7 @@
             font-size: min(calc(#{$font-size/2}), calc(#{$font-size-alt/2}));
 
             // font-weight: 600;
-            font-family: 'Poppins-Semi-Bold';
+            font-family: "Poppins-Semi-Bold";
 
             div + div {
                 margin-top: 1rem;
@@ -34,7 +67,7 @@
             font-size: min(calc(#{$font-size/2}), calc(#{$font-size-alt/2}));
 
             margin-top: 2.5rem;
-            margin-top: min(3.70vh, 2.08vw);
+            margin-top: min(3.7vh, 2.08vw);
 
             // font-size: 1.87rem;
             font-weight: 400;
@@ -42,24 +75,6 @@
             div + div {
                 margin-top: 0.5rem;
             }
-        }
-        .joinButton {
-            $font-size: calc(2.22vh * 2);
-            $font-size-alt: calc(1.25vw * 2);
-            font-size: min(calc(#{$font-size/2}), calc(#{$font-size-alt/2}));
-
-            padding: 1rem 2rem;
-            padding: min(1.48vh, 0.83vw) min(2.96vh, 1.66vw);
-            margin-top: 2.5rem;
-            margin-top: min(3.70vh, 2.08vw);
-            // font-size: 1.5rem;
-            color: white;
-            background-color: transparent;
-
-            border: 1px solid #ffe600;
-            border-radius: 2rem;
-            border-radius: min(2.96vh, 1.66vw);
-            outline: none;
         }
     }
     .yellowRing {
