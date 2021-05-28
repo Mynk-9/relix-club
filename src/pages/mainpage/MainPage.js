@@ -15,8 +15,20 @@ import Rewards from './../../assets/images/rewards.png';
 import Chats from './../../assets/images/chats.png';
 import Metrics from './../../assets/images/metrics.png';
 import TwoMen from './../../assets/images/twomen.png';
+import SmallCard1 from './../../assets/images/smallcard1.png';
+import SmallCard2 from './../../assets/images/smallcard2.png';
+import SmallCard3 from './../../assets/images/smallcard3.png';
+import SmallCard4 from './../../assets/images/smallcard4.png';
+import SmallCard5 from './../../assets/images/smallcard5.png';
+import SmallCard6 from './../../assets/images/smallcard6.png';
 
 const MainPage = props => {
+
+    const fhdScaleMin = pxVal => {
+        let scaleX = pxVal / 1920 * 100;
+        let scaleY = pxVal / 1080 * 100;
+        return `min(${scaleX}vw, ${scaleY}vh)`;
+    };
 
     return (
         <>
@@ -123,6 +135,83 @@ const MainPage = props => {
                                 </ul>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Third Section */}
+            <div className={`${Styles.section}`}>
+                <div className={Styles.content}>
+                    <div className={Styles.heading1}>
+                        {'Creator Coin: A way to'}
+                        <br />
+                        {'turbocharge creator’s ecosystem'}
+                    </div>
+                    <div className={Styles.section3content}>
+                        {/* background */}
+                        <img src={YellowRing} alt={''} className={Styles.yellowRing} />
+                        <img src={Coin} alt={''} className={Styles.bigCoin} />
+                        {/* small cards */}
+                        <img
+                            src={SmallCard1}
+                            alt={''}
+                            className={Styles.smallCard}
+                            style={{
+                                top: fhdScaleMin(187), // 187px
+                                left: fhdScaleMin(435), // 435px
+                                height: fhdScaleMin(251), // 251px
+                            }}
+                        />
+                        <img
+                            src={SmallCard2}
+                            alt={''}
+                            className={Styles.smallCard}
+                            style={{
+                                top: fhdScaleMin(451), // 451px
+                                left: fhdScaleMin(367), // 367px
+                                height: fhdScaleMin(284), // 284px
+                            }}
+                        />
+                        <img
+                            src={SmallCard3}
+                            alt={''}
+                            className={Styles.smallCard}
+                            style={{
+                                top: fhdScaleMin(691),
+                                left: fhdScaleMin(650),
+                                height: fhdScaleMin(263),
+                            }}
+                        />
+                        <img
+                            src={SmallCard4}
+                            alt={''}
+                            className={Styles.smallCard}
+                            style={{
+                                top: fhdScaleMin(661),
+                                right: fhdScaleMin(655),
+                                height: fhdScaleMin(293),
+                            }}
+                        />
+                        <img
+                            src={SmallCard5}
+                            alt={''}
+                            className={Styles.smallCard}
+                            style={{
+                                top: fhdScaleMin(413),
+                                right: fhdScaleMin(369),
+                                height: fhdScaleMin(322),
+                            }}
+                        />
+                        <img
+                            src={SmallCard3}
+                            alt={''}
+                            className={Styles.smallCard}
+                            style={{
+                                top: fhdScaleMin(198),
+                                right: fhdScaleMin(435),
+                                height: fhdScaleMin(240),
+                            }}
+                        />
                     </div>
                 </div>
             </div>

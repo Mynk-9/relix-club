@@ -61,6 +61,28 @@
                 height: fhdScaleMin(654); // 654px
             }
         }
+
+        .section3content {
+            padding-top: fhdScaleMin(100); // 152px adjusted to 110px
+            padding-bottom: fhdScaleMin(276); // 276px
+            text-align: center;
+
+            .bigCoin {
+                height: fhdScaleMin(398); // 398px
+            }
+            .yellowRing {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-55%, -45%);
+                height: 100%;
+                width: 100%;
+            }
+            .smallCard {
+                position: absolute;
+                height: fhdScaleMin(251); // 251px
+            }
+        }
     }
 }
 .heroSection {
