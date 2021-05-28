@@ -10,10 +10,10 @@ import HeroCard1 from './../../assets/images/hero-card-1.png';
 import HeroCard2 from './../../assets/images/hero-card-2.png';
 import HeroCard3 from './../../assets/images/hero-card-3.png';
 import ScrollDownVec from './../../assets/images/scroll-down-vec.svg';
-import Coin from './../../assets/images/coin.svg';
-import Rewards from './../../assets/images/rewards.svg';
-import Chats from './../../assets/images/chats.svg';
-import Metrics from './../../assets/images/metrics.svg';
+import Coin from './../../assets/images/coin.png';
+import Rewards from './../../assets/images/rewards.png';
+import Chats from './../../assets/images/chats.png';
+import Metrics from './../../assets/images/metrics.png';
 import TwoMen from './../../assets/images/twomen.png';
 
 const MainPage = props => {
@@ -101,7 +101,7 @@ const MainPage = props => {
                         <div>
                             <div className={`${Styles.title} yellow-font-color`}>Creators</div>
                             <div className={Styles.description}>
-                                Innovative way for creators to:
+                                {'Innovative way for creators to:'}
                                 <ul>
                                     <li>Launch unique and branded coins</li>
                                     <li>Increase Engagement with the community</li>
@@ -113,13 +113,13 @@ const MainPage = props => {
                             <img src={TwoMen} alt={''} />
                         </div>
                         <div>
-                            <div className={`${Styles.title} yellow-font-color`}>Creators</div>
+                            <div className={`${Styles.title} yellow-font-color`}>Fans</div>
                             <div className={Styles.description}>
-                                Innovative way for creators to:
+                                {'Ability to invest in creators they believe in:'}
                                 <ul>
-                                    <li>Launch unique and branded coins</li>
-                                    <li>Increase Engagement with the community</li>
-                                    <li>A new source of income</li>
+                                    <li>Emotional Value</li>
+                                    <li>Economic upside</li>
+                                    <li>Exciting and unique rewards</li>
                                 </ul>
                             </div>
                         </div>
