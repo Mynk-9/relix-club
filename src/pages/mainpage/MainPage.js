@@ -3,9 +3,9 @@ import Styles from './MainPage.module.scss';
 
 import CoinBanner from './../../assets/images/coinsbanner.png';
 import YellowRing from './../../assets/images/group-back-ring.svg';
-import HeroCard1 from './../../assets/images/hero-card-1.svg';
-import HeroCard2 from './../../assets/images/hero-card-2.svg';
-import HeroCard3 from './../../assets/images/hero-card-3.svg';
+import HeroCard1 from './../../assets/images/hero-card-1.png';
+import HeroCard2 from './../../assets/images/hero-card-2.png';
+import HeroCard3 from './../../assets/images/hero-card-3.png';
 import ScrollDownVec from './../../assets/images/scroll-down-vec.svg';
 
 const MainPage = props => {

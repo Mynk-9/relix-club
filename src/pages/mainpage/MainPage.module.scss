@@ -21,7 +21,8 @@
             $font-size-alt: calc(6.25vw * 2);
             font-size: min(calc(#{$font-size/2}), calc(#{$font-size-alt/2}));
 
-            font-weight: 600;
+            // font-weight: 600;
+            font-family: 'Poppins-Semi-Bold';
 
             div + div {
                 margin-top: 1rem;
