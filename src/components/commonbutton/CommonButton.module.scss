@@ -1,0 +1,20 @@
+@import "./../../App.scss";
+
+.button {
+    $font-size: calc(2.22vh * 2);
+    $font-size-alt: calc(1.25vw * 2);
+    font-size: min(calc(#{$font-size/2}), calc(#{$font-size-alt/2}));
+
+    padding: 1rem 2rem;
+    padding: min(1.48vh, 0.83vw) min(2.96vh, 1.66vw);
+    margin-top: 2.5rem;
+    margin-top: min(3.7vh, 2.08vw);
+    // font-size: 1.5rem;
+    color: white;
+    background-color: transparent;
+
+    border: 1px solid #ffe600;
+    border-radius: 2rem;
+    border-radius: min(2.96vh, 1.66vw);
+    outline: none;
+}
