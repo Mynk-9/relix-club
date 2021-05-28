@@ -37,6 +37,30 @@
                 margin-left: min(5.55vh, 3.125vw);
             }
         }
+
+        .section2content {
+            display: flex;
+            align-items: center;
+
+            > div {
+                vertical-align: middle;
+                display: inline-block;
+
+                .title {
+                    font-weight: 500;
+                    font-size: fhdScaleMin(48); // 48px
+                    text-align: center;
+                }
+                .description {
+                    font-size: fhdScaleMin(20); // 20px
+                    text-align: initial;
+                    margin: revert;
+                }
+            }
+            img {
+                height: fhdScaleMin(654); // 654px
+            }
+        }
     }
 }
 .heroSection {

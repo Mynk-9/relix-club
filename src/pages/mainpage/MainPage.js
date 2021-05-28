@@ -14,6 +14,7 @@ import Coin from './../../assets/images/coin.svg';
 import Rewards from './../../assets/images/rewards.svg';
 import Chats from './../../assets/images/chats.svg';
 import Metrics from './../../assets/images/metrics.svg';
+import TwoMen from './../../assets/images/twomen.png';
 
 const MainPage = props => {
 
@@ -82,6 +83,46 @@ const MainPage = props => {
                     </div>
                     <div style={{ textAlign: 'center' }}>
                         <CommonButton text={'Know More'} />
+                    </div>
+                </div>
+            </div>
+
+            {/* Second Section */}
+            <div className={`${Styles.section}`}>
+                <div className={Styles.content}>
+                    <div className={Styles.heading1}>
+                        {'A virtual economy where both creators and fans grow'}
+                        <br />
+                        {'together and engage through creator coins'}
+                    </div>
+                    <div
+                        className={Styles.section2content}
+                    >
+                        <div>
+                            <div className={`${Styles.title} yellow-font-color`}>Creators</div>
+                            <div className={Styles.description}>
+                                Innovative way for creators to:
+                                <ul>
+                                    <li>Launch unique and branded coins</li>
+                                    <li>Increase Engagement with the community</li>
+                                    <li>A new source of income</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <img src={TwoMen} alt={''} />
+                        </div>
+                        <div>
+                            <div className={`${Styles.title} yellow-font-color`}>Creators</div>
+                            <div className={Styles.description}>
+                                Innovative way for creators to:
+                                <ul>
+                                    <li>Launch unique and branded coins</li>
+                                    <li>Increase Engagement with the community</li>
+                                    <li>A new source of income</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
