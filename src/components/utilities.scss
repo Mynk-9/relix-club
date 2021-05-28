@@ -1,0 +1,12 @@
+// sass functions
+@function min($numbers...) {
+    @return m#{i}n(#{$numbers});
+}
+@function max($numbers...) {
+    @return #{max }(#{$numbers});
+}
+@function fhdScaleMin($number) {
+    $scaled-x: ($number/1920) * 100;
+    $scaled-y: ($number/1080) * 100;
+    @return #{min }(#{"("}#{$scaled-x}vw, #{$scaled-y}vh#{")"});
+}
