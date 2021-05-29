@@ -25,6 +25,7 @@ import Creator from './../../assets/images/creator.png';
 import FansHand from './../../assets/images/fanshand.png';
 import FansCommunity from './../../assets/images/fanscommunity.png';
 import RocketMan from './../../assets/images/rocketman.png';
+import Footer from '../../components/footer/Footer';
 
 const MainPage = props => {
 
@@ -221,7 +222,7 @@ const MainPage = props => {
             </div>
 
             {/* Fourth Section */}
-            <div className={Styles.section} style={{backgroundAttachment: 'fixed'}}>
+            <div className={Styles.section}>
                 <div className={Styles.content}>
                     <div className={Styles.heading1}>
                         {'Here’s how the platform works'}
@@ -313,6 +314,21 @@ const MainPage = props => {
                     </div>
                 </div>
             </div>
+
+            {/* Fifth Section */}
+            <div className={Styles.section} style={{background: 'none'}}>
+                <div className={Styles.content}>
+                    <div className={Styles.heading1}>
+                        {'To know more, join our telegram community'}
+                    </div>
+                    <div className={Styles.description}>
+                        <CommonButton text={'Join our community'} />
+                    </div>
+                </div>
+            </div>
+
+            {/* Footer */}
+            <Footer />
         </>
     );
 };
