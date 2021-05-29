@@ -18,9 +18,7 @@
     user-select: none;
 
     .logo {
-        $font-size: calc(3.33vh * 2);
-        $font-size-alt: calc(1.87vw * 2);
-        font-size: min(calc(#{$font-size/2}), calc(#{$font-size-alt/2}));
+        font-size: fhdScaleMin(36); // 36px
 
         font-family: "Halvar Breitschrift";
         // font-size: xx-large;

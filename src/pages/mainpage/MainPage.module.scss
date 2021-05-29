@@ -11,7 +11,8 @@
         --bottom-margin: min(4.17vh, 2.34vw);
 
         .heading1 {
-            font-size: min(4.44vh, 2.5vw);
+            // font-size: min(4.44vh, 2.5vw);
+            font-size: fhdScaleMin(48); // 48px
             font-family: "Poppins-Semi-Bold";
             text-align: center;
             margin-bottom: var(--bottom-margin);
@@ -25,7 +26,7 @@
         .description {
             // margin: 0 min(29.63vh, 16.67vw);
             // margin: 0 10%;
-            font-size: min(2.78vh, 1.56vw);
+            font-size: fhdScaleMin(30); // 30px
             text-align: center;
             margin-bottom: var(--bottom-margin);
         }
@@ -59,6 +60,54 @@
             }
             img {
                 height: fhdScaleMin(654); // 654px
+            }
+        }
+
+        .section3content {
+            padding-top: fhdScaleMin(100); // 152px adjusted to 110px
+            padding-bottom: fhdScaleMin(276); // 276px
+            text-align: center;
+
+            .bigCoin {
+                height: fhdScaleMin(398); // 398px
+            }
+            .yellowRing {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-55%, -45%);
+                height: 100%;
+                width: 100%;
+            }
+            .smallCard {
+                position: absolute;
+                height: fhdScaleMin(251); // 251px
+            }
+        }
+
+        .section4content {
+            .row {
+                display: flex;
+                align-items: center;
+
+                > div {
+                    flex: 1;
+                    max-width: 50%;
+                }
+                .info {
+                    .heading1 {
+                        text-align: left;
+                        line-height: 1.5;
+                    }
+                    .description {
+                        text-align: left;
+                        line-height: 1.5;
+                    }
+                }
+                .image {
+                    display: flex;
+                    justify-content: space-around;
+                }
             }
         }
     }
