@@ -117,7 +117,14 @@ const MainPage = props => {
                         className={Styles.section2content}
                     >
                         <div>
-                            <div className={`${Styles.title} yellow-font-color`}>Creators</div>
+                            <div
+                                className={`${Styles.title} yellow-font-color`}
+                                style={{
+                                    marginBottom: fhdScaleMin(24),
+                                }}
+                            >
+                                {'Creators'}
+                            </div>
                             <div className={Styles.description}>
                                 {'Innovative way for creators to:'}
                                 <ul>
@@ -131,7 +138,14 @@ const MainPage = props => {
                             <img src={TwoMen} alt={''} />
                         </div>
                         <div>
-                            <div className={`${Styles.title} yellow-font-color`}>Fans</div>
+                            <div
+                                className={`${Styles.title} yellow-font-color`}
+                                style={{
+                                    marginBottom: fhdScaleMin(24),
+                                }}
+                            >
+                                {'Fans'}
+                            </div>
                             <div className={Styles.description}>
                                 {'Ability to invest in creators they believe in:'}
                                 <ul>
@@ -175,6 +189,7 @@ const MainPage = props => {
                                 top: fhdScaleMin(187), // 187px
                                 left: fhdScaleMin(435), // 435px
                                 height: fhdScaleMin(251), // 251px
+                                width: fhdScaleMin(215),
                             }}
                         />
                         <img
@@ -185,6 +200,7 @@ const MainPage = props => {
                                 top: fhdScaleMin(451), // 451px
                                 left: fhdScaleMin(367), // 367px
                                 height: fhdScaleMin(284), // 284px
+                                width: fhdScaleMin(215),
                             }}
                         />
                         <img
@@ -195,6 +211,7 @@ const MainPage = props => {
                                 top: fhdScaleMin(691),
                                 left: fhdScaleMin(650),
                                 height: fhdScaleMin(263),
+                                width: fhdScaleMin(215),
                             }}
                         />
                         <img
@@ -205,6 +222,7 @@ const MainPage = props => {
                                 top: fhdScaleMin(661),
                                 right: fhdScaleMin(655),
                                 height: fhdScaleMin(293),
+                                width: fhdScaleMin(215),
                             }}
                         />
                         <img
@@ -215,6 +233,7 @@ const MainPage = props => {
                                 top: fhdScaleMin(413),
                                 right: fhdScaleMin(369),
                                 height: fhdScaleMin(322),
+                                width: fhdScaleMin(215),
                             }}
                         />
                         <img
@@ -225,6 +244,7 @@ const MainPage = props => {
                                 top: fhdScaleMin(198),
                                 right: fhdScaleMin(435),
                                 height: fhdScaleMin(240),
+                                width: fhdScaleMin(215),
                             }}
                         />
                     </div>
@@ -265,9 +285,9 @@ const MainPage = props => {
                                     src={FansHand}
                                     alt={'fan'}
                                     style={{
-                                        height: fhdScaleMin(750),
-                                        position: 'relative',
-                                        transform: 'translateX(calc(-1 * var(--section-padding-horizontal)))',
+                                        height: fhdScaleMin(600),
+                                        // position: 'relative',
+                                        // transform: 'translateX(calc(-1 * var(--section-padding-horizontal)))',
                                     }}
                                 />
                             </div>
