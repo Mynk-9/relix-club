@@ -21,6 +21,10 @@ import SmallCard3 from './../../assets/images/smallcard3.png';
 import SmallCard4 from './../../assets/images/smallcard4.png';
 import SmallCard5 from './../../assets/images/smallcard5.png';
 import SmallCard6 from './../../assets/images/smallcard6.png';
+import Creator from './../../assets/images/creator.png';
+import FansHand from './../../assets/images/fanshand.png';
+import FansCommunity from './../../assets/images/fanscommunity.png';
+import RocketMan from './../../assets/images/rocketman.png';
 
 const MainPage = props => {
 
@@ -203,7 +207,7 @@ const MainPage = props => {
                             }}
                         />
                         <img
-                            src={SmallCard3}
+                            src={SmallCard6}
                             alt={''}
                             className={Styles.smallCard}
                             style={{
@@ -212,6 +216,100 @@ const MainPage = props => {
                                 height: fhdScaleMin(240),
                             }}
                         />
+                    </div>
+                </div>
+            </div>
+
+            {/* Fourth Section */}
+            <div className={Styles.section} style={{backgroundAttachment: 'fixed'}}>
+                <div className={Styles.content}>
+                    <div className={Styles.heading1}>
+                        {'Here’s how the platform works'}
+                    </div>
+                    <div className={Styles.section4content}>
+                        {/* row 1 */}
+                        <div className={Styles.row}>
+                            <div className={Styles.info}>
+                                <div className={`${Styles.heading1} yellow-font-color`}>
+                                    {'Creator launches coin'}
+                                </div>
+                                <div className={Styles.description}>
+                                    {'Launch their own branded coin powered by blockchain and limited in supply.'}
+                                </div>
+                            </div>
+                            <div className={Styles.image}>
+                                <img
+                                    src={Creator}
+                                    alt={'creator'}
+                                    style={{
+                                        height: fhdScaleMin(551),
+                                    }}
+                                />
+                            </div>
+                        </div>
+                        {/* row 2 */}
+                        <div className={Styles.row}>
+                            <div className={Styles.image} style={{ display: 'revert' }}>
+                                <img
+                                    src={FansHand}
+                                    alt={'fan'}
+                                    style={{
+                                        height: fhdScaleMin(750),
+                                        position: 'relative',
+                                        transform: 'translateX(calc(-1 * var(--section-padding-horizontal)))',
+                                    }}
+                                />
+                            </div>
+                            <div className={Styles.info}>
+                                <div className={`${Styles.heading1} green-font-color`}>
+                                    {'Fans invest in creator'}
+                                </div>
+                                <div className={Styles.description}>
+                                    {'Fans buy their favorite creator’s coins to participate in creators success and to engage deeply with the creator.'}
+                                </div>
+                            </div>
+                        </div>
+                        {/* row 3 */}
+                        <div className={Styles.row}>
+                            <div className={Styles.info}>
+                                <div className={`${Styles.heading1} yellow-font-color`}>
+                                    {'Fans earn exclusive rewards'}<br />{'and build thriving community'}
+                                </div>
+                                <div className={Styles.description}>
+                                    {'Creators reward fans with exciting opportunities such as meet & greet, exclusive workshops, chance to collaborate, NFT drops, etc.'}
+                                </div>
+                            </div>
+                            <div className={Styles.image}>
+                                <img
+                                    src={FansCommunity}
+                                    alt={'community'}
+                                    style={{
+                                        height: fhdScaleMin(617),
+                                    }}
+                                />
+                            </div>
+                        </div>
+                        {/* row 4 */}
+                        <div className={Styles.row}>
+                            <div className={Styles.image}>
+                                <img
+                                    src={RocketMan}
+                                    alt={'growth'}
+                                    style={{
+                                        height: fhdScaleMin(615),
+                                    }}
+                                />
+                            </div>
+                            <div className={Styles.info}>
+                                <div className={`${Styles.heading1} green-font-color`}>
+                                    {'Creators & fans grow together'}
+                                </div>
+                                <div className={Styles.description}>
+                                    <p>Creator coin aligns economic incentives between creator and fans and helps strengthen the relationship between them. As more fans come, the value of the creator coin goes up, increasing the overall size of the creator’s economy and benefiting both fans and creators.</p>
+                                    <p>Imagine a new world where fans get an opportunity to be close to their favorite celebrity while having financial gains.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
