@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Styles from './MainPage.module.scss';
 
 import CommonButton from '../../components/commonbutton/CommonButton';
@@ -28,6 +28,7 @@ import RocketMan from './../../assets/images/rocketman.png';
 import Footer from '../../components/footer/Footer';
 
 const MainPage = props => {
+    const goldCoinRef = useRef(null);
 
     const fhdScaleMin = pxVal => {
         let scaleX = pxVal / 1920 * 100;
@@ -154,8 +155,17 @@ const MainPage = props => {
                     </div>
                     <div className={Styles.section3content}>
                         {/* background */}
-                        <img src={YellowRing} alt={''} className={Styles.yellowRing} />
-                        <img src={Coin} alt={''} className={Styles.bigCoin} />
+                        <img
+                            src={YellowRing}
+                            alt={''}
+                            className={Styles.yellowRing}
+                        />
+                        <img
+                            ref={goldCoinRef}
+                            src={Coin}
+                            alt={''}
+                            className={Styles.bigCoin}
+                        />
                         {/* small cards */}
                         <img
                             src={SmallCard1}
@@ -316,7 +326,7 @@ const MainPage = props => {
             </div>
 
             {/* Fifth Section */}
-            <div className={Styles.section} style={{background: 'none'}}>
+            <div className={Styles.section} style={{ background: 'none' }}>
                 <div className={Styles.content}>
                     <div className={Styles.heading1}>
                         {'To know more, join our telegram community'}
