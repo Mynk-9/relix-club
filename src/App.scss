@@ -15,6 +15,14 @@
     font-family: "Halvar Breitschrift";
     src: url("./assets/fonts/Halvar-Breitschrift/HalvarBreit-Rg.ttf");
 }
+@font-face {
+    font-family: "Halvar Breitschrift Bold";
+    src: url("./assets/fonts/Halvar-Breitschrift/HalvarBreit-XBd.ttf");
+}
+@font-face {
+    font-family: "Halvar Breitschrift Medium";
+    src: url("./assets/fonts/Halvar-Breitschrift/HalvarBreit-Md.ttf");
+}
 
 // normalize
 * {
@@ -47,4 +55,7 @@ body {
 }
 .green-font-color {
     color: #00ffc2;
+}
+ul {
+    padding-inline-start: 30px;
 }
