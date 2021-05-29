@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Styles from './MainPage.module.scss';
 
 import CommonButton from '../../components/commonbutton/CommonButton';
@@ -15,8 +15,26 @@ import Rewards from './../../assets/images/rewards.png';
 import Chats from './../../assets/images/chats.png';
 import Metrics from './../../assets/images/metrics.png';
 import TwoMen from './../../assets/images/twomen.png';
+import SmallCard1 from './../../assets/images/smallcard1.png';
+import SmallCard2 from './../../assets/images/smallcard2.png';
+import SmallCard3 from './../../assets/images/smallcard3.png';
+import SmallCard4 from './../../assets/images/smallcard4.png';
+import SmallCard5 from './../../assets/images/smallcard5.png';
+import SmallCard6 from './../../assets/images/smallcard6.png';
+import Creator from './../../assets/images/creator.png';
+import FansHand from './../../assets/images/fanshand.png';
+import FansCommunity from './../../assets/images/fanscommunity.png';
+import RocketMan from './../../assets/images/rocketman.png';
+import Footer from '../../components/footer/Footer';
 
 const MainPage = props => {
+    const goldCoinRef = useRef(null);
+
+    const fhdScaleMin = pxVal => {
+        let scaleX = pxVal / 1920 * 100;
+        let scaleY = pxVal / 1080 * 100;
+        return `min(${scaleX}vw, ${scaleY}vh)`;
+    };
 
     return (
         <>
@@ -126,6 +144,201 @@ const MainPage = props => {
                     </div>
                 </div>
             </div>
+
+            {/* Third Section */}
+            <div className={`${Styles.section}`}>
+                <div className={Styles.content}>
+                    <div className={Styles.heading1}>
+                        {'Creator Coin: A way to'}
+                        <br />
+                        {'turbocharge creator’s ecosystem'}
+                    </div>
+                    <div className={Styles.section3content}>
+                        {/* background */}
+                        <img
+                            src={YellowRing}
+                            alt={''}
+                            className={Styles.yellowRing}
+                        />
+                        <img
+                            ref={goldCoinRef}
+                            src={Coin}
+                            alt={''}
+                            className={Styles.bigCoin}
+                        />
+                        {/* small cards */}
+                        <img
+                            src={SmallCard1}
+                            alt={''}
+                            className={Styles.smallCard}
+                            style={{
+                                top: fhdScaleMin(187), // 187px
+                                left: fhdScaleMin(435), // 435px
+                                height: fhdScaleMin(251), // 251px
+                            }}
+                        />
+                        <img
+                            src={SmallCard2}
+                            alt={''}
+                            className={Styles.smallCard}
+                            style={{
+                                top: fhdScaleMin(451), // 451px
+                                left: fhdScaleMin(367), // 367px
+                                height: fhdScaleMin(284), // 284px
+                            }}
+                        />
+                        <img
+                            src={SmallCard3}
+                            alt={''}
+                            className={Styles.smallCard}
+                            style={{
+                                top: fhdScaleMin(691),
+                                left: fhdScaleMin(650),
+                                height: fhdScaleMin(263),
+                            }}
+                        />
+                        <img
+                            src={SmallCard4}
+                            alt={''}
+                            className={Styles.smallCard}
+                            style={{
+                                top: fhdScaleMin(661),
+                                right: fhdScaleMin(655),
+                                height: fhdScaleMin(293),
+                            }}
+                        />
+                        <img
+                            src={SmallCard5}
+                            alt={''}
+                            className={Styles.smallCard}
+                            style={{
+                                top: fhdScaleMin(413),
+                                right: fhdScaleMin(369),
+                                height: fhdScaleMin(322),
+                            }}
+                        />
+                        <img
+                            src={SmallCard6}
+                            alt={''}
+                            className={Styles.smallCard}
+                            style={{
+                                top: fhdScaleMin(198),
+                                right: fhdScaleMin(435),
+                                height: fhdScaleMin(240),
+                            }}
+                        />
+                    </div>
+                </div>
+            </div>
+
+            {/* Fourth Section */}
+            <div className={Styles.section}>
+                <div className={Styles.content}>
+                    <div className={Styles.heading1}>
+                        {'Here’s how the platform works'}
+                    </div>
+                    <div className={Styles.section4content}>
+                        {/* row 1 */}
+                        <div className={Styles.row}>
+                            <div className={Styles.info}>
+                                <div className={`${Styles.heading1} yellow-font-color`}>
+                                    {'Creator launches coin'}
+                                </div>
+                                <div className={Styles.description}>
+                                    {'Launch their own branded coin powered by blockchain and limited in supply.'}
+                                </div>
+                            </div>
+                            <div className={Styles.image}>
+                                <img
+                                    src={Creator}
+                                    alt={'creator'}
+                                    style={{
+                                        height: fhdScaleMin(551),
+                                    }}
+                                />
+                            </div>
+                        </div>
+                        {/* row 2 */}
+                        <div className={Styles.row}>
+                            <div className={Styles.image} style={{ display: 'revert' }}>
+                                <img
+                                    src={FansHand}
+                                    alt={'fan'}
+                                    style={{
+                                        height: fhdScaleMin(750),
+                                        position: 'relative',
+                                        transform: 'translateX(calc(-1 * var(--section-padding-horizontal)))',
+                                    }}
+                                />
+                            </div>
+                            <div className={Styles.info}>
+                                <div className={`${Styles.heading1} green-font-color`}>
+                                    {'Fans invest in creator'}
+                                </div>
+                                <div className={Styles.description}>
+                                    {'Fans buy their favorite creator’s coins to participate in creators success and to engage deeply with the creator.'}
+                                </div>
+                            </div>
+                        </div>
+                        {/* row 3 */}
+                        <div className={Styles.row}>
+                            <div className={Styles.info}>
+                                <div className={`${Styles.heading1} yellow-font-color`}>
+                                    {'Fans earn exclusive rewards'}<br />{'and build thriving community'}
+                                </div>
+                                <div className={Styles.description}>
+                                    {'Creators reward fans with exciting opportunities such as meet & greet, exclusive workshops, chance to collaborate, NFT drops, etc.'}
+                                </div>
+                            </div>
+                            <div className={Styles.image}>
+                                <img
+                                    src={FansCommunity}
+                                    alt={'community'}
+                                    style={{
+                                        height: fhdScaleMin(617),
+                                    }}
+                                />
+                            </div>
+                        </div>
+                        {/* row 4 */}
+                        <div className={Styles.row}>
+                            <div className={Styles.image}>
+                                <img
+                                    src={RocketMan}
+                                    alt={'growth'}
+                                    style={{
+                                        height: fhdScaleMin(615),
+                                    }}
+                                />
+                            </div>
+                            <div className={Styles.info}>
+                                <div className={`${Styles.heading1} green-font-color`}>
+                                    {'Creators & fans grow together'}
+                                </div>
+                                <div className={Styles.description}>
+                                    <p>Creator coin aligns economic incentives between creator and fans and helps strengthen the relationship between them. As more fans come, the value of the creator coin goes up, increasing the overall size of the creator’s economy and benefiting both fans and creators.</p>
+                                    <p>Imagine a new world where fans get an opportunity to be close to their favorite celebrity while having financial gains.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Fifth Section */}
+            <div className={Styles.section} style={{ background: 'none' }}>
+                <div className={Styles.content}>
+                    <div className={Styles.heading1}>
+                        {'To know more, join our telegram community'}
+                    </div>
+                    <div className={Styles.description}>
+                        <CommonButton text={'Join our community'} />
+                    </div>
+                </div>
+            </div>
+
+            {/* Footer */}
+            <Footer />
         </>
     );
 };
