@@ -3,6 +3,7 @@ import Styles from './MainPage.module.scss';
 
 import CommonButton from '../../components/commonbutton/CommonButton';
 import GlassCard from '../../components/glasscard/GlassCard';
+import Footer from '../../components/footer/Footer';
 
 import CoinBanner from './../../assets/images/coinsbanner.png';
 import YellowRing from './../../assets/images/group-back-ring.svg';
@@ -25,7 +26,7 @@ import Creator from './../../assets/images/creator.png';
 import FansHand from './../../assets/images/fanshand.png';
 import FansCommunity from './../../assets/images/fanscommunity.png';
 import RocketMan from './../../assets/images/rocketman.png';
-import Footer from '../../components/footer/Footer';
+import YellowElipse from './../../assets/images/elipse.png';
 
 const MainPage = props => {
     const goldCoinRef = useRef(null);
@@ -160,7 +161,13 @@ const MainPage = props => {
             </div>
 
             {/* Third Section */}
-            <div className={`${Styles.section}`}>
+            <div className={`${Styles.section}`} style={{
+                background: `url(${YellowElipse})`,
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center center',
+                backgroundSize: '150%',
+                // backgroundAttachment: 'fixed',
+            }}>
                 <div className={Styles.content}>
                     <div className={Styles.heading1}>
                         {'Creator Coin: A way to'}
@@ -169,11 +176,11 @@ const MainPage = props => {
                     </div>
                     <div className={Styles.section3content}>
                         {/* background */}
-                        <img
+                        {/* <img
                             src={YellowRing}
                             alt={''}
                             className={Styles.yellowRing}
-                        />
+                        /> */}
                         <img
                             ref={goldCoinRef}
                             src={Coin}
