@@ -167,6 +167,10 @@
                 > div {
                     flex: 1;
                     max-width: 50%;
+
+                    @media screen and (max-width: 768px) {
+                        max-width: initial;
+                    }
                 }
                 .info {
                     .heading1 {
@@ -181,6 +185,108 @@
                 .image {
                     display: flex;
                     justify-content: space-around;
+                }
+            }
+            @media screen and (max-width: 768px) {
+                .section4content {
+                    overflow-x: hidden;
+                }
+                .row {
+                    overflow-x: hidden;
+                    flex-direction: column-reverse;
+
+                    .info::before {
+                        display: block;
+                        font-family: 'Poppins-Semi-Bold';
+                        line-height: 1.5;
+                    }
+                    .info {
+                        background-color: #1e1f2c;
+                        padding: 1rem;
+
+                        .description {
+                            margin: 0;
+                        }
+                    }
+                }
+                .row:nth-child(2n + 1) {
+                    margin-right: -2rem;
+
+                    .info::before {
+                        color: var(--common-green-color);
+                    }
+                    .info {
+                        padding-right: 2rem;
+                        border-top-left-radius: 1rem;
+                        border-bottom-left-radius: 1rem;
+                    }
+                }
+                .row:nth-child(2n) {
+                    flex-direction: column;
+                    margin-left: -2rem;
+
+                    .info::before {
+                        color: var(--common-yellow-color);
+                        text-align: right;
+                    }
+                    .info {
+                        padding-left: 2rem;
+                        border-top-right-radius: 1rem;
+                        border-bottom-right-radius: 1rem;
+                    }
+                }
+
+                .row:nth-child(1) {
+                    .info::before {
+                        content: "01";
+                    }
+                    .image {
+                        margin-bottom: -5rem;
+
+                        img {
+                            height: 25rem !important;
+                            transform: translateX(3rem);
+                        }
+                    }
+                }
+                .row:nth-child(2) {
+                    .info::before {
+                        content: "02";
+                    }
+                    .image {
+                        margin-bottom: -5rem;
+
+                        img {
+                            height: 25rem !important;
+                            transform: translateX(-2rem);
+                        }
+                    }
+                }
+                .row:nth-child(3) {
+                    .info::before {
+                        content: "03";
+                    }
+                    .image {
+                        margin-bottom: -5rem;
+
+                        img {
+                            height: 25rem !important;
+                            transform: translateX(1rem);
+                        }
+                    }
+                }
+                .row:nth-child(4) {
+                    .info::before {
+                        content: "04";
+                    }
+                    .image {
+                        margin-bottom: -5rem;
+
+                        img {
+                            height: 25rem !important;
+                            transform: translateX(-2rem);
+                        }
+                    }
                 }
             }
         }
@@ -368,10 +474,10 @@
 }
 
 .visibleMobile {
-    display: none;
+    display: none !important;
 
     @media screen and (max-width: 768px) {
-        display: revert;
+        display: revert !important;
     }
 }
 .visiblePC {
