@@ -29,6 +29,8 @@
             justify-content: space-between;
             flex-direction: row;
             width: 100%;
+
+            z-index: 100;
         }
 
         .navToggle {
@@ -82,11 +84,26 @@
         font-size: min(calc(#{$font-size/2}), calc(#{$font-size-alt/2}));
 
         @media screen and (max-width: 768px) {
-            // display: flex;
-            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
             font-size: 1rem;
+            background-color: rgba(0, 0, 0, 1);
 
+            z-index: 90;
+
+            transform: translateX(calc(-100% - 10rem));
+            transition: transform 1s ease;
+
+            span {
+                padding: 1rem 0;
+            }
             span + span {
                 margin-left: 0 !important;
             }
@@ -100,7 +117,7 @@
     }
     .links[data-visible="true"] {
         @media screen and (max-width: 768px) {
-            display: flex;
+            transform: none;
         }
     }
 }
