@@ -116,37 +116,88 @@
     height: 100vh;
     padding-top: var(--section-hero-padding-top);
 
+    @media screen and (max-width: 768px) {
+        .wrapper {
+            position: relative;
+            background: url("./../../assets/images/elipse.png");
+            background-size: cover;
+            margin: -1rem;
+
+            .yellowRing {
+                display: none;
+            }
+            .coinBanner {
+                position: relative;
+                top: 0;
+                right: 0;
+                height: auto;
+                width: 100%;
+                transform: revert;
+
+                content: url("./../../assets/images/coinbanner-mobile.png");
+            }
+        }
+    }
+
     .content {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         margin-right: 40%;
 
+        @media screen and (max-width: 768px) {
+            position: initial;
+            top: initial;
+            margin: initial;
+            transform: initial;
+        }
+
         .heading {
             $font-size: calc(11.11vh * 2);
             $font-size-alt: calc(6.25vw * 2);
             font-size: min(calc(#{$font-size/2}), calc(#{$font-size-alt/2}));
-
-            // font-weight: 600;
             font-family: "Poppins-Semi-Bold";
+
+            @media screen and (max-width: 768px) {
+                font-size: 2.5rem;
+            }
 
             div + div {
                 margin-top: 1rem;
+                @media screen and (max-width: 768px) {
+                    margin-top: 0.5rem;
+                }
             }
         }
         .brief {
             $font-size: calc(2.78vh * 2);
             $font-size-alt: calc(1.56vw * 2);
             font-size: min(calc(#{$font-size/2}), calc(#{$font-size-alt/2}));
+            font-weight: 400;
 
             margin-top: 2.5rem;
             margin-top: min(3.7vh, 2.08vw);
 
-            // font-size: 1.87rem;
-            font-weight: 400;
+            @media screen and (max-width: 768px) {
+                margin-top: 1.5rem;
+                font-size: 0.7rem;
+            }
 
             div + div {
                 margin-top: 0.5rem;
+            }
+        }
+        .buttonWrapper {
+            button {
+                @media screen and (max-width: 768px) {
+                    padding: 0.5rem 1.5rem;
+                    margin-top: 1.5rem;
+                    font-size: 0.7rem;
+                    font-family: "Poppins-Semi-Bold";
+                    color: black;
+                    background: #ffe600;
+                    border-radius: 2rem;
+                }
             }
         }
     }
@@ -171,19 +222,40 @@
 
         width: 278px;
         width: min(25.74vh, 14.48vw);
-        // height: 92px;
+
+        @media screen and (max-width: 768px) {
+            width: 150px;
+        }
     }
     .heroCard[data-number="1"] {
         right: 22.7vw;
         bottom: 34.26vh;
+
+        @media screen and (max-width: 768px) {
+            top: 50%;
+            transform: translateY(-50%);
+            left: 2rem;
+            right: initial;
+            bottom: initial;
+        }
     }
     .heroCard[data-number="2"] {
         right: 8.23vw;
         bottom: 24.53vh;
+
+        @media screen and (max-width: 768px) {
+            bottom: 30%;
+        }
     }
     .heroCard[data-number="3"] {
         right: 13.54vw;
         bottom: 12.03vh;
+
+        @media screen and (max-width: 768px) {
+            right: initial;
+            left: 13.54vw;
+            bottom: 15%;
+        }
     }
 
     .scrollDown {
@@ -193,7 +265,10 @@
         transform: translateX(-50%);
         margin-bottom: 1.3rem;
         margin-bottom: min(1.92vh, 1.08vw);
-        // min(1.48vh, 0.83vw)
+
+        @media screen and (max-width: 768px) {
+            margin-bottom: 1rem;
+        }
 
         div {
             margin-bottom: 0.75rem;
@@ -201,6 +276,11 @@
 
             font-size: 1.125rem;
             font-size: min(1.66vh, 0.93vw);
+
+            @media screen and (max-width: 768px) {
+                margin-bottom: 0.5rem;
+                font-size: 0.7rem;
+            }
         }
 
         img {
@@ -209,6 +289,10 @@
 
             height: 2.37rem;
             height: min(3.5vh, 1.97vw);
+
+            @media screen and (max-width: 768px) {
+                height: 1.5rem;
+            }
         }
     }
 }
