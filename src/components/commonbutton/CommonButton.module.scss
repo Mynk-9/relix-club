@@ -17,4 +17,12 @@
     border-radius: 2rem;
     border-radius: min(2.96vh, 1.66vw);
     outline: none;
+
+    @media screen and (max-width: 768px) {
+        padding: 0.5rem 1.5rem;
+        margin-top: 1.5rem;
+        font-size: 0.7rem;
+        font-family: "Poppins-Semi-Bold";
+        border-radius: 2rem;
+    }
 }

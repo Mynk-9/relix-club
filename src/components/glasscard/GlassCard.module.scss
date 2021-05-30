@@ -10,14 +10,23 @@
     height: min(35.56vh, 20vw); //384px
     width: min(33.42vh, 18.8vw); //361px
 
-    background: url('./../../assets/images/card-background.png');
+    background: url("./../../assets/images/card-background.png");
     background-size: 100%;
     background-repeat: no-repeat;
+
+    @media screen and (max-width: 768px) {
+        height: 19.43rem;
+        width: 15.69rem;
+        padding: 1.5rem;
+        padding-top: 7rem;
+        margin-top: 3.5rem;
+
+        line-height: 1.5;
+    }
 
     div {
         margin-left: 0 !important;
     }
-
     .icon {
         position: absolute;
         top: 0;
@@ -25,15 +34,37 @@
         height: min(19.63vh, 11.04vw); // 212px
         // height: fhdScaleMin(212); // 212px
         transform: translateY(calc(max(-4.44vh, -2.5vw))) translateX(-50%);
+
+        @media screen and (max-width: 768px) {
+            height: 10rem;
+            transform: translateY(-3rem) translateX(-50%);
+        }
+    }
+    .mobileWrapper {
+        @media screen and (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: calc(100% - 3rem);
+        }
     }
     .title {
         font-family: "Poppins-Semi-Bold";
         font-size: min(2.22vh, 1.25vw);
         text-align: center;
+
+        @media screen and (max-width: 768px) {
+            font-size: 1rem;
+        }
     }
     .desc {
         margin-top: min(4.17vh, 2.34vw);
         font-size: min(1.67vh, 0.94vw);
         text-align: center;
+
+        @media screen and (max-width: 768px) {
+            font-family: 'Poppins-Light';
+            font-size: 0.7rem;
+        }
     }
 }

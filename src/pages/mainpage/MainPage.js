@@ -78,9 +78,14 @@ const MainPage = props => {
                         {'What is a creator coin?'}
                     </div>
                     <div className={Styles.description}>
-                        {'Creator coin is a way to invest in the creators you love and showcase your fandom.'}
-                        <br />
-                        {'These coins are backed by the blockchain and are yours to keep forever.'}
+                        <div className={Styles.visiblePC}>
+                            {'Creator coin is a way to invest in the creators you love and showcase your fandom.'}
+                            <br />
+                            {'These coins are backed by the blockchain and are yours to keep forever.'}
+                        </div>
+                        <div className={Styles.visibleMobile}>
+                            {'Creator coin is a way to invest in the creators you love and showcase your fandom. These coins are backed by the blockchain and are yours to keep forever.'}
+                        </div>
                     </div>
                     <div className={Styles.horizontalScroll}>
                         <GlassCard
