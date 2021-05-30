@@ -12,6 +12,7 @@ import HeroCard2 from './../../assets/images/hero-card-2.png';
 import HeroCard3 from './../../assets/images/hero-card-3.png';
 import ScrollDownVec from './../../assets/images/scroll-down-vec.svg';
 import Coin from './../../assets/images/coin.png';
+import CoinStack from './../../assets/images/coinstack-L.png'
 import Rewards from './../../assets/images/rewards.png';
 import Chats from './../../assets/images/chats.png';
 import Metrics from './../../assets/images/metrics.png';
@@ -26,7 +27,10 @@ import Creator from './../../assets/images/creator.png';
 import FansHand from './../../assets/images/fanshand.png';
 import FansCommunity from './../../assets/images/fanscommunity.png';
 import RocketMan from './../../assets/images/rocketman.png';
+import RocketManLarge from './../../assets/images/rocketman-L.png';
 import YellowElipse from './../../assets/images/elipse.png';
+import Juggler from './../../assets/images/juggler.png';
+import PinkPhone from './../../assets/images/pinkphone.png'
 
 const MainPage = props => {
     const goldCoinRef = useRef(null);
@@ -78,9 +82,14 @@ const MainPage = props => {
                         {'What is a creator coin?'}
                     </div>
                     <div className={Styles.description}>
-                        {'Creator coin is a way to invest in the creators you love and showcase your fandom.'}
-                        <br />
-                        {'These coins are backed by the blockchain and are yours to keep forever.'}
+                        <div className={Styles.visiblePC}>
+                            {'Creator coin is a way to invest in the creators you love and showcase your fandom.'}
+                            <br />
+                            {'These coins are backed by the blockchain and are yours to keep forever.'}
+                        </div>
+                        <div className={Styles.visibleMobile}>
+                            {'Creator coin is a way to invest in the creators you love and showcase your fandom. These coins are backed by the blockchain and are yours to keep forever.'}
+                        </div>
                     </div>
                     <div className={Styles.horizontalScroll}>
                         <GlassCard
@@ -104,6 +113,7 @@ const MainPage = props => {
                             desc={'Buy and trade NFTs, avail creator services and collaborate with the creators'}
                         />
                     </div>
+                    <div style={{ margin: '-1.5rem 0' }} className={Styles.visibleMobile} />
                     <div style={{ textAlign: 'center' }}>
                         <CommonButton text={'Know More'} />
                     </div>
@@ -114,14 +124,22 @@ const MainPage = props => {
             <div className={`${Styles.section}`}>
                 <div className={Styles.content}>
                     <div className={Styles.heading1}>
-                        {'A virtual economy where both creators and fans grow'}
-                        <br />
-                        {'together and engage through creator coins'}
+                        <div className={Styles.visiblePC}>
+                            {'A virtual economy where both creators and fans grow'}
+                            <br />
+                            {'together and engage through creator coins'}
+                        </div>
+                        <div className={Styles.visibleMobile}>
+                            {'A virtual economy where both creators and fans grow together and engage through creator coins'}
+                        </div>
                     </div>
                     <div
                         className={Styles.section2content}
                     >
-                        <div>
+                        <div className={Styles.visibleMobile}>
+                            <img src={TwoMen} alt={''} />
+                        </div>
+                        <div className={Styles.details}>
                             <div
                                 className={`${Styles.title} yellow-font-color`}
                                 style={{
@@ -139,10 +157,10 @@ const MainPage = props => {
                                 </ul>
                             </div>
                         </div>
-                        <div>
+                        <div className={Styles.visiblePC}>
                             <img src={TwoMen} alt={''} />
                         </div>
-                        <div>
+                        <div className={Styles.details}>
                             <div
                                 className={`${Styles.title} yellow-font-color`}
                                 style={{
@@ -191,73 +209,192 @@ const MainPage = props => {
                             alt={''}
                             className={Styles.bigCoin}
                         />
-                        {/* small cards */}
-                        <img
-                            src={SmallCard1}
-                            alt={''}
-                            className={Styles.smallCard}
+                        {/* small cards PC */}
+                        <div className={Styles.visiblePC}>
+                            <img
+                                src={SmallCard1}
+                                alt={''}
+                                className={Styles.smallCard}
+                                style={{
+                                    top: fhdScaleMin(187), // 187px
+                                    left: fhdScaleMin(435), // 435px
+                                    height: fhdScaleMin(251), // 251px
+                                    width: fhdScaleMin(215),
+                                }}
+                            />
+                            <img
+                                src={SmallCard2}
+                                alt={''}
+                                className={Styles.smallCard}
+                                style={{
+                                    top: fhdScaleMin(451), // 451px
+                                    left: fhdScaleMin(367), // 367px
+                                    height: fhdScaleMin(284), // 284px
+                                    width: fhdScaleMin(215),
+                                }}
+                            />
+                            <img
+                                src={SmallCard3}
+                                alt={''}
+                                className={Styles.smallCard}
+                                style={{
+                                    top: fhdScaleMin(691),
+                                    left: fhdScaleMin(650),
+                                    height: fhdScaleMin(263),
+                                    width: fhdScaleMin(215),
+                                }}
+                            />
+                            <img
+                                src={SmallCard4}
+                                alt={''}
+                                className={Styles.smallCard}
+                                style={{
+                                    top: fhdScaleMin(661),
+                                    right: fhdScaleMin(655),
+                                    height: fhdScaleMin(293),
+                                    width: fhdScaleMin(215),
+                                }}
+                            />
+                            <img
+                                src={SmallCard5}
+                                alt={''}
+                                className={Styles.smallCard}
+                                style={{
+                                    top: fhdScaleMin(413),
+                                    right: fhdScaleMin(369),
+                                    height: fhdScaleMin(322),
+                                    width: fhdScaleMin(215),
+                                }}
+                            />
+                            <img
+                                src={SmallCard6}
+                                alt={''}
+                                className={Styles.smallCard}
+                                style={{
+                                    top: fhdScaleMin(198),
+                                    right: fhdScaleMin(435),
+                                    height: fhdScaleMin(240),
+                                    width: fhdScaleMin(215),
+                                }}
+                            />
+                        </div>
+
+                        {/* Small cards Phone */}
+                        <div
+                            className={`${Styles.horizontalScroll} ${Styles.visibleMobile}`}
                             style={{
-                                top: fhdScaleMin(187), // 187px
-                                left: fhdScaleMin(435), // 435px
-                                height: fhdScaleMin(251), // 251px
-                                width: fhdScaleMin(215),
+                                paddingTop: '4rem'
                             }}
-                        />
-                        <img
-                            src={SmallCard2}
-                            alt={''}
-                            className={Styles.smallCard}
-                            style={{
-                                top: fhdScaleMin(451), // 451px
-                                left: fhdScaleMin(367), // 367px
-                                height: fhdScaleMin(284), // 284px
-                                width: fhdScaleMin(215),
-                            }}
-                        />
-                        <img
-                            src={SmallCard3}
-                            alt={''}
-                            className={Styles.smallCard}
-                            style={{
-                                top: fhdScaleMin(691),
-                                left: fhdScaleMin(650),
-                                height: fhdScaleMin(263),
-                                width: fhdScaleMin(215),
-                            }}
-                        />
-                        <img
-                            src={SmallCard4}
-                            alt={''}
-                            className={Styles.smallCard}
-                            style={{
-                                top: fhdScaleMin(661),
-                                right: fhdScaleMin(655),
-                                height: fhdScaleMin(293),
-                                width: fhdScaleMin(215),
-                            }}
-                        />
-                        <img
-                            src={SmallCard5}
-                            alt={''}
-                            className={Styles.smallCard}
-                            style={{
-                                top: fhdScaleMin(413),
-                                right: fhdScaleMin(369),
-                                height: fhdScaleMin(322),
-                                width: fhdScaleMin(215),
-                            }}
-                        />
-                        <img
-                            src={SmallCard6}
-                            alt={''}
-                            className={Styles.smallCard}
-                            style={{
-                                top: fhdScaleMin(198),
-                                right: fhdScaleMin(435),
-                                height: fhdScaleMin(240),
-                                width: fhdScaleMin(215),
-                            }}
-                        />
+                        >
+                            <GlassCard
+                                icon={CoinStack}
+                                title={'Economy'}
+                                desc={'Build an economy based on creator’s coin'}
+                                style={{
+                                    height: '250px',
+                                    width: '215px',
+                                }}
+                                titleStyle={{
+                                    fontSize: '1.3rem'
+                                }}
+                                descStyle={{
+                                    fontSize: '0.8rem',
+                                    fontFamily: 'Poppins-XLight',
+                                    lineHeight: '1.5'
+                                }}
+                                iconStyle={{ transform: 'translate(-50%, -5rem)' }}
+                            />
+                            <GlassCard
+                                icon={Juggler}
+                                title={'Community'}
+                                desc={'Create a robust community of super fans'}
+                                style={{
+                                    height: '250px',
+                                    width: '215px',
+                                }}
+                                titleStyle={{
+                                    fontSize: '1.3rem'
+                                }}
+                                descStyle={{
+                                    fontSize: '0.8rem',
+                                    fontFamily: 'Poppins-XLight',
+                                    lineHeight: '1.5'
+                                }}
+                                iconStyle={{ transform: 'translate(-50%, -5rem)' }}
+                            />
+                            <GlassCard
+                                icon={Metrics}
+                                title={'Services'}
+                                desc={'Enable collaboration between creators and fans'}
+                                style={{
+                                    height: '250px',
+                                    width: '215px',
+                                }}
+                                titleStyle={{
+                                    fontSize: '1.3rem'
+                                }}
+                                descStyle={{
+                                    fontSize: '0.8rem',
+                                    fontFamily: 'Poppins-XLight',
+                                    lineHeight: '1.5'
+                                }}
+                                iconStyle={{ transform: 'translate(-50%, -5rem)' }}
+                            />
+                            <GlassCard
+                                icon={PinkPhone}
+                                title={'Launch NFTs'}
+                                desc={'Help creators launch their NFTs'}
+                                style={{
+                                    height: '250px',
+                                    width: '215px',
+                                }}
+                                titleStyle={{
+                                    fontSize: '1.3rem'
+                                }}
+                                descStyle={{
+                                    fontSize: '0.8rem',
+                                    fontFamily: 'Poppins-XLight',
+                                    lineHeight: '1.5'
+                                }}
+                                iconStyle={{ transform: 'translate(-50%, -5rem)' }}
+                            />
+                            <GlassCard
+                                icon={RocketManLarge}
+                                title={'Success'}
+                                desc={'Enable fans to participate in creator’s success'}
+                                style={{
+                                    height: '250px',
+                                    width: '215px',
+                                }}
+                                titleStyle={{
+                                    fontSize: '1.3rem'
+                                }}
+                                descStyle={{
+                                    fontSize: '0.8rem',
+                                    fontFamily: 'Poppins-XLight',
+                                    lineHeight: '1.5'
+                                }}
+                                iconStyle={{ transform: 'translate(-50%, -5rem)' }}
+                            />
+                            <GlassCard
+                                icon={Rewards}
+                                title={'Rewards'}
+                                desc={'Creators can incentivize their super fans'}
+                                style={{
+                                    height: '250px',
+                                    width: '215px',
+                                }}
+                                titleStyle={{
+                                    fontSize: '1.3rem'
+                                }}
+                                descStyle={{
+                                    fontSize: '0.8rem',
+                                    fontFamily: 'Poppins-XLight',
+                                    lineHeight: '1.5'
+                                }}
+                                iconStyle={{ transform: 'translate(-50%, -5rem)' }}
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
