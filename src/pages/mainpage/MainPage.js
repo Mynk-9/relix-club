@@ -109,6 +109,7 @@ const MainPage = props => {
                             desc={'Buy and trade NFTs, avail creator services and collaborate with the creators'}
                         />
                     </div>
+                    <div style={{margin: '-1.5rem 0'}} className={Styles.visibleMobile} />
                     <div style={{ textAlign: 'center' }}>
                         <CommonButton text={'Know More'} />
                     </div>

@@ -217,6 +217,7 @@
         .buttonWrapper {
             button {
                 @media screen and (max-width: 768px) {
+                    margin-top: 1.5rem;
                     color: black;
                     background: #ffe600;
                 }
