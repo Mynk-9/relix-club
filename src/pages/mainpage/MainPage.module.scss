@@ -70,23 +70,66 @@
             display: flex;
             align-items: center;
 
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+            }
+
+            > div.visiblePC {
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
+            }
+            .details {
+                @media screen and (max-width: 768px) {
+                    padding: 1rem;
+                    background-color: #1e1f2c;
+                    border-radius: 2rem;
+                }
+            }
+            .details:last-child {
+                @media screen and (max-width: 768px) {
+                    margin-top: 1rem;
+                }
+            }
             > div {
                 vertical-align: middle;
                 display: inline-block;
 
+                @media screen and (max-width: 768px) {
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                }
                 .title {
                     font-weight: 500;
                     font-size: fhdScaleMin(48); // 48px
                     text-align: center;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: 1rem;
+                    }
                 }
                 .description {
                     font-size: fhdScaleMin(20); // 20px
                     text-align: initial;
                     margin: revert;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: 0.7rem;
+                        ul {
+                            margin: 0;
+                            padding-left: 1rem;
+                        }
+                    }
                 }
             }
             img {
                 height: fhdScaleMin(654); // 654px
+
+                @media screen and (max-width: 768px) {
+                    width: 80%;
+                    height: auto;
+                }
             }
         }
 
@@ -319,6 +362,7 @@
         }
     }
 }
+
 .visibleMobile {
     display: none;
 

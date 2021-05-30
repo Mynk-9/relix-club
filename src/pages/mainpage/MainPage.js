@@ -109,7 +109,7 @@ const MainPage = props => {
                             desc={'Buy and trade NFTs, avail creator services and collaborate with the creators'}
                         />
                     </div>
-                    <div style={{margin: '-1.5rem 0'}} className={Styles.visibleMobile} />
+                    <div style={{ margin: '-1.5rem 0' }} className={Styles.visibleMobile} />
                     <div style={{ textAlign: 'center' }}>
                         <CommonButton text={'Know More'} />
                     </div>
@@ -120,14 +120,22 @@ const MainPage = props => {
             <div className={`${Styles.section}`}>
                 <div className={Styles.content}>
                     <div className={Styles.heading1}>
-                        {'A virtual economy where both creators and fans grow'}
-                        <br />
-                        {'together and engage through creator coins'}
+                        <div className={Styles.visiblePC}>
+                            {'A virtual economy where both creators and fans grow'}
+                            <br />
+                            {'together and engage through creator coins'}
+                        </div>
+                        <div className={Styles.visibleMobile}>
+                            {'A virtual economy where both creators and fans grow together and engage through creator coins'}
+                        </div>
                     </div>
                     <div
                         className={Styles.section2content}
                     >
-                        <div>
+                        <div className={Styles.visibleMobile}>
+                            <img src={TwoMen} alt={''} />
+                        </div>
+                        <div className={Styles.details}>
                             <div
                                 className={`${Styles.title} yellow-font-color`}
                                 style={{
@@ -145,10 +153,10 @@ const MainPage = props => {
                                 </ul>
                             </div>
                         </div>
-                        <div>
+                        <div className={Styles.visiblePC}>
                             <img src={TwoMen} alt={''} />
                         </div>
-                        <div>
+                        <div className={Styles.details}>
                             <div
                                 className={`${Styles.title} yellow-font-color`}
                                 style={{
