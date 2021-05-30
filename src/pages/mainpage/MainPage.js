@@ -41,6 +41,15 @@ const MainPage = props => {
         <>
             {/* Hero Section */}
             <div className={`${Styles.section} ${Styles.heroSection}`}>
+                <div className={Styles.wrapper}>
+                    <img className={Styles.yellowRing} src={YellowRing} alt={''} />
+                    <img className={Styles.coinBanner} src={CoinBanner} alt={'Coin Banner'} />
+
+                    <img className={Styles.heroCard} data-number={1} src={HeroCard1} alt={''} />
+                    <img className={Styles.heroCard} data-number={2} src={HeroCard2} alt={''} />
+                    <img className={Styles.heroCard} data-number={3} src={HeroCard3} alt={''} />
+                </div>
+
                 <div className={Styles.content}>
                     <div className={Styles.heading}>
                         <div>Invest in things</div>
@@ -51,15 +60,10 @@ const MainPage = props => {
                         <div>teams and their fans to thrive together through</div>
                         <div>creator coin</div>
                     </div>
-                    {/* <button className={Styles.joinButton}>Join our community</button> */}
-                    <CommonButton text={'Join our community'} />
+                    <div className={Styles.buttonWrapper}>
+                        <CommonButton text={'Join our community'} />
+                    </div>
                 </div>
-                <img className={Styles.yellowRing} src={YellowRing} alt={''} />
-                <img className={Styles.coinBanner} src={CoinBanner} alt={'Coin Banner'} />
-
-                <img className={Styles.heroCard} data-number={1} src={HeroCard1} alt={''} />
-                <img className={Styles.heroCard} data-number={2} src={HeroCard2} alt={''} />
-                <img className={Styles.heroCard} data-number={3} src={HeroCard3} alt={''} />
 
                 <div className={Styles.scrollDown}>
                     <div>Scroll Down</div>
