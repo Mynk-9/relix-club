@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Styles from './MainPage.module.scss';
 
 import CommonButton from '../../components/commonbutton/CommonButton';
@@ -28,12 +28,13 @@ import FansHand from './../../assets/images/fanshand.png';
 import FansCommunity from './../../assets/images/fanscommunity.png';
 import RocketMan from './../../assets/images/rocketman.png';
 import RocketManLarge from './../../assets/images/rocketman-L.png';
-import YellowElipse from './../../assets/images/elipse.png';
+// import YellowElipse from './../../assets/images/elipse.png';
 import Juggler from './../../assets/images/juggler.png';
 import PinkPhone from './../../assets/images/pinkphone.png'
 
 const MainPage = props => {
     const goldCoinRef = useRef(null);
+    const heroSectionRef = useRef(null);
 
     const fhdScaleMin = pxVal => {
         let scaleX = pxVal / 1920 * 100;
@@ -41,10 +42,39 @@ const MainPage = props => {
         return `min(${scaleX}vw, ${scaleY}vh)`;
     };
 
+    useEffect(() => {
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                // rect.top >= 0 ||
+                // rect.left >= 0 ||
+                // rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) ||
+                // rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                rect.bottom >= 0
+            );
+        }
+        window.onscroll = () => {
+            if (!heroSectionRef) return;
+
+            let nav = document.getElementsByTagName('nav')[0];
+            if (isInViewport(heroSectionRef.current)) {
+                if (nav.getAttribute('nav-opaque'))
+                    nav.removeAttribute('nav-opaque');
+            } else {
+                if (!nav.getAttribute('nav-opaque'))
+                    nav.setAttribute('nav-opaque', 'true');
+            }
+        };
+
+        return () => {
+            window.onscroll = null;
+        }
+    }, []);
+
     return (
         <>
             {/* Hero Section */}
-            <div className={`${Styles.section} ${Styles.heroSection}`}>
+            <div className={`${Styles.section} ${Styles.heroSection}`} ref={heroSectionRef}>
                 <div className={Styles.wrapper}>
                     <img className={Styles.yellowRing} src={YellowRing} alt={''} />
                     <img className={Styles.coinBanner} src={CoinBanner} alt={'Coin Banner'} />
@@ -76,7 +106,7 @@ const MainPage = props => {
             </div>
 
             {/* First Section */}
-            <div className={`${Styles.section}`}>
+            <div className={`${Styles.section}`} style={{ paddingTop: '5rem' }}>
                 <div className={Styles.content}>
                     <div className={Styles.heading1}>
                         {'What is a creator coin?'}
@@ -183,13 +213,7 @@ const MainPage = props => {
             </div>
 
             {/* Third Section */}
-            <div className={`${Styles.section}`} style={{
-                background: `url(${YellowElipse})`,
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'center center',
-                backgroundSize: '150%',
-                // backgroundAttachment: 'fixed',
-            }}>
+            <div className={`${Styles.section} ${Styles.ellipseBgSection}`}>
                 <div className={Styles.content}>
                     <div className={Styles.heading1}>
                         {'Creator Coin: A way to'}
