@@ -1,16 +1,16 @@
 import React from 'react';
 import Styles from './CommonButton.module.scss';
 
-const CommonButton = props => {
+const CommonButton = ({ onClick, text }) => {
     return (
         <button
             className={Styles.button}
             onClick={
-                props.onClick
+                onClick
                 || (() => { })
             }
         >
-            { props.text}
+            { text}
         </button >
     );
 };

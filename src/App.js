@@ -6,6 +6,7 @@ import './App.scss';
 
 import Navbar from './components/navbar/Navbar';
 import MainPage from './pages/mainpage/MainPage';
+import KnowMore from './pages/knowmore/KnowMore';
 
 function App() {
     return (
@@ -19,6 +20,10 @@ function App() {
                 <Route
                     path='/home'
                     render={props => <MainPage />}
+                />
+                <Route
+                    path='/knowmore'
+                    render={props => <KnowMore />}
                 />
             </Switch>
         </BrowserRouter>

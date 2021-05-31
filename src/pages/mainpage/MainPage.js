@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { useHistory } from 'react-router-dom';
 import Styles from './MainPage.module.scss';
 
 import CommonButton from '../../components/commonbutton/CommonButton';
@@ -35,6 +36,7 @@ import PinkPhone from './../../assets/images/pinkphone.png'
 const MainPage = props => {
     const goldCoinRef = useRef(null);
     const heroSectionRef = useRef(null);
+    let history = useHistory();
 
     const fhdScaleMin = pxVal => {
         let scaleX = pxVal / 1920 * 100;
@@ -95,7 +97,12 @@ const MainPage = props => {
                         <div>creator coin</div>
                     </div>
                     <div className={Styles.buttonWrapper}>
-                        <CommonButton text={'Join our community'} />
+                        <CommonButton
+                            text={'Join our community'}
+                            onClick={() => {
+                                window.open('https://t.me/relixclub', '_blank');
+                            }}
+                        />
                     </div>
                 </div>
 
