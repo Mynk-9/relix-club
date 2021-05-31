@@ -31,7 +31,7 @@ import FansHand from './../../assets/images/fanshand.png';
 import FansCommunity from './../../assets/images/fanscommunity.png';
 import RocketMan from './../../assets/images/rocketman.png';
 import RocketManLarge from './../../assets/images/rocketman-L.png';
-import YellowElipse from './../../assets/images/elipse.png';
+// import YellowElipse from './../../assets/images/elipse.png';
 import Juggler from './../../assets/images/juggler.png';
 import PinkPhone from './../../assets/images/pinkphone.png'
 
@@ -252,17 +252,12 @@ const MainPage = props => {
             <div className={`${Styles.section} ${Styles.ellipseBgSection}`}>
                 <div className={Styles.content}>
                     <div className={Styles.heading1}>
-                        {'Creator Coin: A way to'}
+                        {/* {'Creator Coin: A way to'}
                         <br />
-                        {'turbocharge creator’s ecosystem'}
+                        {'turbocharge creator’s ecosystem'} */}
+                        {'Turbocharging creators ecosystem'}
                     </div>
                     <div className={Styles.section3content}>
-                        {/* background */}
-                        {/* <img
-                            src={YellowRing}
-                            alt={''}
-                            className={Styles.yellowRing}
-                        /> */}
                         <img
                             ref={goldCoinRef}
                             src={Coin}

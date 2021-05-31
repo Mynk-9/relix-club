@@ -13,11 +13,11 @@ import Footer from '../../components/footer/Footer';
 
 const KnowMore = props => {
 
-    const fhdScaleMin = pxVal => {
-        let scaleX = pxVal / 1920 * 100;
-        let scaleY = pxVal / 1080 * 100;
-        return `min(${scaleX}vw, ${scaleY}vh)`;
-    };
+    // const fhdScaleMin = pxVal => {
+    //     let scaleX = pxVal / 1920 * 100;
+    //     let scaleY = pxVal / 1080 * 100;
+    //     return `min(${scaleX}vw, ${scaleY}vh)`;
+    // };
 
     return (
         <>
