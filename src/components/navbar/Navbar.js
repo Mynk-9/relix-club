@@ -4,6 +4,7 @@ import logo from './../../assets/images/logo.svg';
 import Styles from './Navbar.module.scss';
 
 import MenuIcon from './../../assets/images/Menu-right.png';
+import { Link } from 'react-router-dom';
 
 const Navbar = props => {
     const [navOpen, setNavOpen] = useState(false);
@@ -13,9 +14,9 @@ const Navbar = props => {
             <div className={Styles.mobileWrapper}>
                 <div className={Styles.logo}>
                     <img src={logo} alt={'logo'} />
-                    <span>relix</span>
+                    <span>{'relix'}</span>
                     <span className={`yellow-font-color`}>.</span>
-                    <span>club</span>
+                    <span>{'club'}</span>
                 </div>
                 <div className={Styles.navToggle}>
                     <button onClick={() => setNavOpen(!navOpen)} >
@@ -24,8 +25,12 @@ const Navbar = props => {
                 </div>
             </div>
             <div className={Styles.links} data-visible={navOpen}>
-                <span>Home</span>
-                <span>Contents</span>
+                <span><Link to={'/'}>{'Home'}</Link></span>
+                <span>
+                    <Link to={'/contactus'}>
+                        {'Contact Us'}
+                    </Link>
+                </span>
             </div>
         </nav>
     );

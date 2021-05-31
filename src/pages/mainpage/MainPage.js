@@ -1,13 +1,14 @@
 import React, { useEffect, useRef } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router';
 import Styles from './MainPage.module.scss';
+import Fade from 'react-reveal';
 
 import CommonButton from '../../components/commonbutton/CommonButton';
 import GlassCard from '../../components/glasscard/GlassCard';
 import Footer from '../../components/footer/Footer';
 
-import CoinBanner from './../../assets/images/coinsbanner.png';
-import YellowRing from './../../assets/images/group-back-ring.svg';
+import CoinBanner from './../../assets/images/combined-coinbanner.png';
+// import YellowRing from './../../assets/images/group-back-ring.svg';
 import HeroCard1 from './../../assets/images/hero-card-1.png';
 import HeroCard2 from './../../assets/images/hero-card-2.png';
 import HeroCard3 from './../../assets/images/hero-card-3.png';
@@ -18,6 +19,7 @@ import Rewards from './../../assets/images/rewards.png';
 import Chats from './../../assets/images/chats.png';
 import Metrics from './../../assets/images/metrics.png';
 import TwoMen from './../../assets/images/twomen.png';
+import TwoMenCropped from './../../assets/images/twomencropped.png';
 import SmallCard1 from './../../assets/images/smallcard1.png';
 import SmallCard2 from './../../assets/images/smallcard2.png';
 import SmallCard3 from './../../assets/images/smallcard3.png';
@@ -29,13 +31,14 @@ import FansHand from './../../assets/images/fanshand.png';
 import FansCommunity from './../../assets/images/fanscommunity.png';
 import RocketMan from './../../assets/images/rocketman.png';
 import RocketManLarge from './../../assets/images/rocketman-L.png';
-// import YellowElipse from './../../assets/images/elipse.png';
+import YellowElipse from './../../assets/images/elipse.png';
 import Juggler from './../../assets/images/juggler.png';
 import PinkPhone from './../../assets/images/pinkphone.png'
 
 const MainPage = props => {
     const goldCoinRef = useRef(null);
     const heroSectionRef = useRef(null);
+    const scrollDownRef = useRef(null);
     let history = useHistory();
 
     const fhdScaleMin = pxVal => {
@@ -55,16 +58,29 @@ const MainPage = props => {
                 rect.bottom >= 0
             );
         }
+        function isFillingViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return rect.top >= 0;
+        }
         window.onscroll = () => {
-            if (!heroSectionRef) return;
-
+            if (!heroSectionRef || !scrollDownRef) return;
             let nav = document.getElementsByTagName('nav')[0];
-            if (isInViewport(heroSectionRef.current)) {
+            let hero = heroSectionRef.current;
+            let scrollDown = scrollDownRef.current;
+
+            if (isInViewport(hero)) {
                 if (nav.getAttribute('nav-opaque'))
                     nav.removeAttribute('nav-opaque');
             } else {
                 if (!nav.getAttribute('nav-opaque'))
                     nav.setAttribute('nav-opaque', 'true');
+            }
+
+            if (isFillingViewport(heroSectionRef.current)) {
+                if (scrollDown.getAttribute('data-visible'))
+                    scrollDown.removeAttribute('data-visible');
+            } else {
+                scrollDown.setAttribute('data-visible', 'false');
             }
         };
 
@@ -78,7 +94,7 @@ const MainPage = props => {
             {/* Hero Section */}
             <div className={`${Styles.section} ${Styles.heroSection}`} ref={heroSectionRef}>
                 <div className={Styles.wrapper}>
-                    <img className={Styles.yellowRing} src={YellowRing} alt={''} />
+                    {/* <img className={Styles.yellowRing} src={YellowElipse} alt={''} /> */}
                     <img className={Styles.coinBanner} src={CoinBanner} alt={'Coin Banner'} />
 
                     <img className={Styles.heroCard} data-number={1} src={HeroCard1} alt={''} />
@@ -106,53 +122,63 @@ const MainPage = props => {
                     </div>
                 </div>
 
-                <div className={Styles.scrollDown}>
+                <div className={Styles.scrollDown} data-visible="true" ref={scrollDownRef}>
                     <div>Scroll Down</div>
                     <img src={ScrollDownVec} alt={''} />
                 </div>
             </div>
 
             {/* First Section */}
-            <div className={`${Styles.section}`} style={{ paddingTop: '5rem' }}>
+            <div className={`${Styles.section}`}>
                 <div className={Styles.content}>
                     <div className={Styles.heading1}>
-                        {'What is a creator coin?'}
+                        <Fade bottom>
+                            {'Introducing Creator Coin'}
+                        </Fade>
                     </div>
                     <div className={Styles.description}>
-                        <div className={Styles.visiblePC}>
-                            {'Creator coin is a way to invest in the creators you love and showcase your fandom.'}
-                            <br />
-                            {'These coins are backed by the blockchain and are yours to keep forever.'}
-                        </div>
-                        <div className={Styles.visibleMobile}>
-                            {'Creator coin is a way to invest in the creators you love and showcase your fandom. These coins are backed by the blockchain and are yours to keep forever.'}
-                        </div>
+                        <Fade bottom>
+                            <div className={Styles.visiblePC}>
+                                {'Creator coin is a way to invest in the creators you love and showcase your fandom.'}
+                                <br />
+                                {'These coins are backed by the blockchain and are yours to keep forever.'}
+                            </div>
+                            <div className={Styles.visibleMobile}>
+                                {'Creator coin is a way to invest in the creators you love and showcase your fandom. These coins are backed by the blockchain and are yours to keep forever.'}
+                            </div>
+                        </Fade>
                     </div>
-                    <div className={Styles.horizontalScroll}>
-                        <GlassCard
-                            icon={Coin}
-                            title={'Become a part of creators success'}
-                            desc={'Be early and gain financial rewards through creator coins'}
-                        />
-                        <GlassCard
-                            icon={Rewards}
-                            title={'Earning once in a lifetime rewards'}
-                            desc={'Ability to meet,  have early access, own digital collectibles and many more unique rewards'}
-                        />
-                        <GlassCard
-                            icon={Chats}
-                            title={'Influence decisions'}
-                            desc={'Help your favorite celebrities in making key life decisions'}
-                        />
-                        <GlassCard
-                            icon={Metrics}
-                            title={'Access to exclusive marketplace'}
-                            desc={'Buy and trade NFTs, avail creator services and collaborate with the creators'}
-                        />
-                    </div>
+                    <Fade bottom>
+                        <div className={Styles.horizontalScroll}>
+                            <GlassCard
+                                icon={Coin}
+                                title={'Become a part of creators success'}
+                                desc={'Be early and gain financial rewards through creator coins'}
+                            />
+                            <GlassCard
+                                icon={Rewards}
+                                title={'Earning once in a lifetime rewards'}
+                                desc={'Chance to meet, gain early access, own digital collectibles and many more unique rewards'}
+                            />
+                            <GlassCard
+                                icon={Chats}
+                                title={'Influence decisions'}
+                                desc={'Help your favorite celebrities in making key life decisions'}
+                            />
+                            <GlassCard
+                                icon={Metrics}
+                                title={'Access to exclusive marketplace'}
+                                desc={'Buy and trade NFTs, avail creator services and collaborate with the creators'}
+                            />
+                        </div>
+                    </Fade>
                     <div style={{ margin: '-1.5rem 0' }} className={Styles.visibleMobile} />
                     <div style={{ textAlign: 'center' }}>
-                        <CommonButton text={'Know More'} />
+                        <Fade bottom>
+                            <CommonButton text={'Know More'} onClick={() => {
+                                history.push('/knowmore');
+                            }} />
+                        </Fade>
                     </div>
                 </div>
             </div>
@@ -161,20 +187,19 @@ const MainPage = props => {
             <div className={`${Styles.section}`}>
                 <div className={Styles.content}>
                     <div className={Styles.heading1}>
-                        <div className={Styles.visiblePC}>
-                            {'A virtual economy where both creators and fans grow'}
-                            <br />
-                            {'together and engage through creator coins'}
-                        </div>
-                        <div className={Styles.visibleMobile}>
-                            {'A virtual economy where both creators and fans grow together and engage through creator coins'}
-                        </div>
+                        <Fade bottom>
+                            {'Building an economy for creators & fans'}
+                        </Fade>
                     </div>
                     <div
                         className={Styles.section2content}
                     >
                         <div className={Styles.visibleMobile}>
-                            <img src={TwoMen} alt={''} />
+                            <Fade bottom>
+                                <img src={TwoMenCropped} alt={''} style={{
+                                    marginBottom: '2rem',
+                                }} />
+                            </Fade>
                         </div>
                         <div className={Styles.details}>
                             <div
@@ -187,11 +212,13 @@ const MainPage = props => {
                             </div>
                             <div className={Styles.description}>
                                 {'Innovative way for creators to:'}
-                                <ul>
-                                    <li>Launch unique and branded coins</li>
-                                    <li>Increase Engagement with the community</li>
-                                    <li>A new source of income</li>
-                                </ul>
+                                <Fade bottom cascade>
+                                    <ul>
+                                        <li>{'Launch unique and branded coins'}</li>
+                                        <li>{'Increase Engagement with the community'}</li>
+                                        <li>{'Additional source of revenue'}</li>
+                                    </ul>
+                                </Fade>
                             </div>
                         </div>
                         <div className={Styles.visiblePC}>
@@ -207,12 +234,14 @@ const MainPage = props => {
                                 {'Fans'}
                             </div>
                             <div className={Styles.description}>
-                                {'Ability to invest in creators they believe in:'}
-                                <ul>
-                                    <li>Emotional Value</li>
-                                    <li>Economic upside</li>
-                                    <li>Exciting and unique rewards</li>
-                                </ul>
+                                {'Invest in creators for:'}
+                                <Fade bottom cascade>
+                                    <ul>
+                                        <li>{'Emotional Value'}</li>
+                                        <li>{'Economic upside'}</li>
+                                        <li>{'Exciting and unique rewards'}</li>
+                                    </ul>
+                                </Fade>
                             </div>
                         </div>
                     </div>

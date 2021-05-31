@@ -114,6 +114,13 @@
             margin-left: min(7.4vh, 4.15vw);
             // min(1.48vh, 0.83vw)
         }
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
     }
     .links[data-visible="true"] {
         @media screen and (max-width: 768px) {
