@@ -1,0 +1,101 @@
+@import "./../mainpage/MainPage.module.scss";
+@import "./../../components/utilities.scss";
+
+.section {
+    .content {
+        padding-top: 5rem;
+        padding-left: fhdScaleMin(195);
+        padding-right: fhdScaleMin(195);
+
+        @media screen and (max-width: 768px) {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+}
+.section {
+    .row {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+
+        --content-margin: min(
+            calc(100 / 1080 * 100vh),
+            calc(100 / 1920 * 100vw)
+        );
+        // --content-margin: 10rem;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column-reverse;
+
+            div {
+                text-align: center;
+            }
+        }
+        div.info {
+            margin-left: var(--content-margin);
+
+            @media screen and (max-width: 768px) {
+                margin-right: 0;
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+
+            div {
+                text-align: left;
+
+                @media screen and (max-width: 768px) {
+                    text-align: center;
+                }
+            }
+            div.title {
+                font-size: fhdScaleMin(36);
+                font-family: "Poppins-Semi-Bold";
+
+                @media screen and (max-width: 768px) {
+                    font-size: 1rem;
+                }
+            }
+            div.description {
+                font-size: fhdScaleMin(24);
+                font-family: "Poppins-Light";
+                margin-top: fhdScaleMin(27);
+
+                @media screen and (max-width: 768px) {
+                    font-size: 0.7rem;
+                    margin: 0;
+                }
+            }
+        }
+        img {
+            height: fhdScaleMin(250);
+            // width: fhdScaleMin(400);
+
+            @media screen and (max-width: 768px) {
+                height: auto;
+                width: 50%;
+            }
+        }
+    }
+    .row:nth-child(2n + 1) {
+        flex-direction: row;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column-reverse;
+        }
+
+        .info {
+            margin-left: initial;
+            margin-right: var(--content-margin);
+
+            @media screen and (max-width: 768px) {
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }
+    }
+    .row + .row {
+        margin-top: 5rem;
+    }
+}
