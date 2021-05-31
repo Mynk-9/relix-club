@@ -23,15 +23,20 @@
         display: block;
         --bottom-margin: min(4.17vh, 2.34vw);
 
+        @media screen and (max-width: 768px) {
+            --bottom-margin: 2rem;
+        }
+
         .heading1 {
             // font-size: min(4.44vh, 2.5vw);
-            font-size: fhdScaleMin(48); // 48px
+            font-size: fhdScaleMin(64); // 48px
             font-family: "Poppins-Semi-Bold";
             text-align: center;
             margin-bottom: var(--bottom-margin);
 
             @media screen and (max-width: 768px) {
-                font-size: 1.5rem;
+                font-size: 2.1rem;
+                line-height: 1.5;
             }
         }
         .heading2 {
@@ -46,11 +51,13 @@
             font-size: fhdScaleMin(30); // 30px
             text-align: center;
             margin-bottom: var(--bottom-margin);
+            line-height: 1.5;
 
             @media screen and (max-width: 768px) {
                 font-size: 1rem;
                 line-height: 1.7;
                 margin: 0 0.5rem;
+                margin-bottom: var(--bottom-margin);
             }
         }
         .horizontalScroll {
@@ -308,6 +315,7 @@
 .heroSection {
     height: 100vh;
     padding-top: var(--section-hero-padding-top);
+    overflow: hidden;
 
     @media screen and (max-width: 768px) {
         .wrapper {
@@ -392,9 +400,12 @@
     }
     .yellowRing {
         position: absolute;
+        // top: -18rem;
+        // right: -8rem;
         top: 0;
-        right: 0;
-        height: 100%;
+        top: fhdScaleMin(-550);
+        right: fhdScaleMin(-350);
+        height: fhdScaleMin(2000);
     }
     .coinBanner {
         position: absolute;
@@ -408,6 +419,8 @@
         position: absolute;
         bottom: 0;
         right: 0;
+        backdrop-filter: blur(20px);
+        border-radius: 2rem;
 
         width: 278px;
         width: min(25.74vh, 14.48vw);
@@ -455,6 +468,9 @@
         margin-bottom: 1.3rem;
         margin-bottom: min(1.92vh, 1.08vw);
 
+        opacity: 1;
+        transition: opacity 1s ease;
+
         @media screen and (max-width: 768px) {
             margin-bottom: 1rem;
         }
@@ -483,6 +499,17 @@
                 height: 1.5rem;
             }
         }
+    }
+    .scrollDown[data-visible="false"] {
+        opacity: 0;
+    }
+}
+
+.heroSection + .section {
+    padding-top: 5rem;
+
+    @media screen and (max-width: 768px) {
+        padding-top: 0;
     }
 }
 
