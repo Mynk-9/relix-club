@@ -1,13 +1,15 @@
 import React from 'react';
 import Styles from './GlassCard.module.scss';
 
-const GlassCard = props => {
-    
+const GlassCard = ({ icon, title, desc, style, titleStyle, descStyle, iconStyle }) => {
+
     return (
-        <div className={Styles.card}>
-            <img className={Styles.icon} src={props.icon} alt={'logo'} />
-            <div className={Styles.title}>{props.title}</div>
-            <div className={Styles.desc}>{props.desc}</div>
+        <div className={Styles.card} style={style}>
+            <img className={Styles.icon} src={icon} alt={'logo'} style={iconStyle} />
+            <div className={Styles.mobileWrapper}>
+                <div className={Styles.title} style={titleStyle}>{title}</div>
+                <div className={Styles.desc} style={descStyle}>{desc}</div>
+            </div>
         </div>
     );
 };

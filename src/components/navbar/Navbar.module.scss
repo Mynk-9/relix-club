@@ -17,6 +17,42 @@
     z-index: 99;
     user-select: none;
 
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .mobileWrapper {
+        @media screen and (max-width: 768px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+            width: 100%;
+
+            z-index: 100;
+        }
+
+        .navToggle {
+            display: none;
+
+            @media screen and (max-width: 768px) {
+                display: block;
+            }
+
+            button {
+                padding: 0;
+                margin: 0;
+                outline: 0;
+                border: none;
+                background: none;
+
+                img {
+                    height: 36px;
+                }
+            }
+        }
+    }
     .logo {
         font-size: fhdScaleMin(36); // 36px
 
@@ -24,12 +60,21 @@
         font-family: "Halvar Breitschrift Medium";
         font-weight: lighter;
 
+        @media screen and (max-width: 768px) {
+            font-size: 1rem;
+        }
+
         img {
             width: 44px;
             width: min(4.07vh, 2.29vw);
             margin-right: 1.5rem;
             margin-right: min(2.22vh, 1.24vw);
             vertical-align: middle;
+
+            @media screen and (max-width: 768px) {
+                width: 25px;
+                margin-right: 1rem;
+            }
         }
     }
     .links {
@@ -38,10 +83,41 @@
         $font-size-alt: calc(1.25vw * 2);
         font-size: min(calc(#{$font-size/2}), calc(#{$font-size-alt/2}));
 
+        @media screen and (max-width: 768px) {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 1rem;
+            background-color: rgba(0, 0, 0, 1);
+
+            z-index: 90;
+
+            transform: translateX(calc(-100% - 10rem));
+            transition: transform 1s ease;
+
+            span {
+                padding: 1rem 0;
+            }
+            span + span {
+                margin-left: 0 !important;
+            }
+        }
+
         span + span {
             margin-left: 5rem;
             margin-left: min(7.4vh, 4.15vw);
             // min(1.48vh, 0.83vw)
+        }
+    }
+    .links[data-visible="true"] {
+        @media screen and (max-width: 768px) {
+            transform: none;
         }
     }
 }

@@ -16,6 +16,10 @@
             font-family: "Poppins-Semi-Bold";
             text-align: center;
             margin-bottom: var(--bottom-margin);
+
+            @media screen and (max-width: 768px) {
+                font-size: 1.5rem;
+            }
         }
         .heading2 {
             font-size: fhdScaleMin(40); // 40px
@@ -29,13 +33,36 @@
             font-size: fhdScaleMin(30); // 30px
             text-align: center;
             margin-bottom: var(--bottom-margin);
+
+            @media screen and (max-width: 768px) {
+                font-size: 1rem;
+                line-height: 1.7;
+                margin: 0 0.5rem;
+            }
         }
         .horizontalScroll {
             overflow-x: auto;
             display: flex;
             justify-content: space-between;
-            div + div {
+
+            > div + div {
                 margin-left: min(5.55vh, 3.125vw);
+            }
+
+            @media screen and (max-width: 768px) {
+                display: block;
+                white-space: nowrap;
+                margin: 0 -2rem;
+                padding: 0 2rem;
+
+                > div {
+                    display: inline-block;
+                    white-space: normal;
+                    vertical-align: middle;
+                }
+                > div + div {
+                    margin-left: 2rem;
+                }
             }
         }
 
@@ -43,23 +70,66 @@
             display: flex;
             align-items: center;
 
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+            }
+
+            > div.visiblePC {
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
+            }
+            .details {
+                @media screen and (max-width: 768px) {
+                    padding: 1rem;
+                    background-color: #1e1f2c;
+                    border-radius: 2rem;
+                }
+            }
+            .details:last-child {
+                @media screen and (max-width: 768px) {
+                    margin-top: 1rem;
+                }
+            }
             > div {
                 vertical-align: middle;
                 display: inline-block;
 
+                @media screen and (max-width: 768px) {
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                }
                 .title {
                     font-weight: 500;
                     font-size: fhdScaleMin(48); // 48px
                     text-align: center;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: 1rem;
+                    }
                 }
                 .description {
                     font-size: fhdScaleMin(20); // 20px
                     text-align: initial;
                     margin: revert;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: 0.7rem;
+                        ul {
+                            margin: 0;
+                            padding-left: 1rem;
+                        }
+                    }
                 }
             }
             img {
                 height: fhdScaleMin(654); // 654px
+
+                @media screen and (max-width: 768px) {
+                    width: 80%;
+                    height: auto;
+                }
             }
         }
 
@@ -70,6 +140,10 @@
 
             .bigCoin {
                 height: fhdScaleMin(398); // 398px
+
+                @media screen and (max-width: 768px) {
+                    height: 10rem;
+                }
             }
             .yellowRing {
                 position: absolute;
@@ -93,6 +167,10 @@
                 > div {
                     flex: 1;
                     max-width: 50%;
+
+                    @media screen and (max-width: 768px) {
+                        max-width: initial;
+                    }
                 }
                 .info {
                     .heading1 {
@@ -109,6 +187,108 @@
                     justify-content: space-around;
                 }
             }
+            @media screen and (max-width: 768px) {
+                .section4content {
+                    overflow-x: hidden;
+                }
+                .row {
+                    overflow-x: hidden;
+                    flex-direction: column-reverse;
+
+                    .info::before {
+                        display: block;
+                        font-family: 'Poppins-Semi-Bold';
+                        line-height: 1.5;
+                    }
+                    .info {
+                        background-color: #1e1f2c;
+                        padding: 1rem;
+
+                        .description {
+                            margin: 0;
+                        }
+                    }
+                }
+                .row:nth-child(2n + 1) {
+                    margin-right: -2rem;
+
+                    .info::before {
+                        color: var(--common-green-color);
+                    }
+                    .info {
+                        padding-right: 2rem;
+                        border-top-left-radius: 1rem;
+                        border-bottom-left-radius: 1rem;
+                    }
+                }
+                .row:nth-child(2n) {
+                    flex-direction: column;
+                    margin-left: -2rem;
+
+                    .info::before {
+                        color: var(--common-yellow-color);
+                        text-align: right;
+                    }
+                    .info {
+                        padding-left: 2rem;
+                        border-top-right-radius: 1rem;
+                        border-bottom-right-radius: 1rem;
+                    }
+                }
+
+                .row:nth-child(1) {
+                    .info::before {
+                        content: "01";
+                    }
+                    .image {
+                        margin-bottom: -5rem;
+
+                        img {
+                            height: 25rem !important;
+                            transform: translateX(3rem);
+                        }
+                    }
+                }
+                .row:nth-child(2) {
+                    .info::before {
+                        content: "02";
+                    }
+                    .image {
+                        margin-bottom: -5rem;
+
+                        img {
+                            height: 25rem !important;
+                            transform: translateX(-2rem);
+                        }
+                    }
+                }
+                .row:nth-child(3) {
+                    .info::before {
+                        content: "03";
+                    }
+                    .image {
+                        margin-bottom: -5rem;
+
+                        img {
+                            height: 25rem !important;
+                            transform: translateX(1rem);
+                        }
+                    }
+                }
+                .row:nth-child(4) {
+                    .info::before {
+                        content: "04";
+                    }
+                    .image {
+                        margin-bottom: -5rem;
+
+                        img {
+                            height: 25rem !important;
+                            transform: translateX(-2rem);
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -116,37 +296,84 @@
     height: 100vh;
     padding-top: var(--section-hero-padding-top);
 
+    @media screen and (max-width: 768px) {
+        .wrapper {
+            position: relative;
+            background: url("./../../assets/images/elipse.png");
+            background-size: cover;
+            margin: -1rem;
+
+            .yellowRing {
+                display: none;
+            }
+            .coinBanner {
+                position: relative;
+                top: 0;
+                right: 0;
+                height: auto;
+                width: 100%;
+                transform: revert;
+
+                content: url("./../../assets/images/coinbanner-mobile.png");
+            }
+        }
+    }
+
     .content {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         margin-right: 40%;
 
+        @media screen and (max-width: 768px) {
+            position: initial;
+            top: initial;
+            margin: initial;
+            transform: initial;
+        }
+
         .heading {
             $font-size: calc(11.11vh * 2);
             $font-size-alt: calc(6.25vw * 2);
             font-size: min(calc(#{$font-size/2}), calc(#{$font-size-alt/2}));
-
-            // font-weight: 600;
             font-family: "Poppins-Semi-Bold";
+
+            @media screen and (max-width: 768px) {
+                font-size: 2.5rem;
+            }
 
             div + div {
                 margin-top: 1rem;
+                @media screen and (max-width: 768px) {
+                    margin-top: 0.5rem;
+                }
             }
         }
         .brief {
             $font-size: calc(2.78vh * 2);
             $font-size-alt: calc(1.56vw * 2);
             font-size: min(calc(#{$font-size/2}), calc(#{$font-size-alt/2}));
+            font-weight: 400;
 
             margin-top: 2.5rem;
             margin-top: min(3.7vh, 2.08vw);
 
-            // font-size: 1.87rem;
-            font-weight: 400;
+            @media screen and (max-width: 768px) {
+                margin-top: 1.5rem;
+                font-size: 0.7rem;
+            }
 
             div + div {
                 margin-top: 0.5rem;
+            }
+        }
+        .buttonWrapper {
+            button {
+                @media screen and (max-width: 768px) {
+                    margin-top: 1.5rem;
+                    color: black;
+                    background: #ffe600;
+                }
             }
         }
     }
@@ -171,19 +398,40 @@
 
         width: 278px;
         width: min(25.74vh, 14.48vw);
-        // height: 92px;
+
+        @media screen and (max-width: 768px) {
+            width: 150px;
+        }
     }
     .heroCard[data-number="1"] {
         right: 22.7vw;
         bottom: 34.26vh;
+
+        @media screen and (max-width: 768px) {
+            top: 50%;
+            transform: translateY(-50%);
+            left: 2rem;
+            right: initial;
+            bottom: initial;
+        }
     }
     .heroCard[data-number="2"] {
         right: 8.23vw;
         bottom: 24.53vh;
+
+        @media screen and (max-width: 768px) {
+            bottom: 30%;
+        }
     }
     .heroCard[data-number="3"] {
         right: 13.54vw;
         bottom: 12.03vh;
+
+        @media screen and (max-width: 768px) {
+            right: initial;
+            left: 13.54vw;
+            bottom: 15%;
+        }
     }
 
     .scrollDown {
@@ -193,7 +441,10 @@
         transform: translateX(-50%);
         margin-bottom: 1.3rem;
         margin-bottom: min(1.92vh, 1.08vw);
-        // min(1.48vh, 0.83vw)
+
+        @media screen and (max-width: 768px) {
+            margin-bottom: 1rem;
+        }
 
         div {
             margin-bottom: 0.75rem;
@@ -201,6 +452,11 @@
 
             font-size: 1.125rem;
             font-size: min(1.66vh, 0.93vw);
+
+            @media screen and (max-width: 768px) {
+                margin-bottom: 0.5rem;
+                font-size: 0.7rem;
+            }
         }
 
         img {
@@ -209,6 +465,23 @@
 
             height: 2.37rem;
             height: min(3.5vh, 1.97vw);
+
+            @media screen and (max-width: 768px) {
+                height: 1.5rem;
+            }
         }
+    }
+}
+
+.visibleMobile {
+    display: none !important;
+
+    @media screen and (max-width: 768px) {
+        display: revert !important;
+    }
+}
+.visiblePC {
+    @media screen and (max-width: 768px) {
+        display: none;
     }
 }
