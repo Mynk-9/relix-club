@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router';
 import Styles from './Footer.module.scss';
 
 import Logo from './../../assets/images/logo.svg';
@@ -11,6 +12,7 @@ import YouTubeLogo from './../../assets/images/yt-logo.png';
 
 const Footer = props => {
     const thisYear = (new Date()).getFullYear();
+    let history = useHistory();
 
     return (
         <footer className={Styles.footer}>
@@ -23,8 +25,18 @@ const Footer = props => {
                 </div>
                 <div className={Styles.links}>
                     <div className={Styles.websiteLinks}>
-                        <button className={'yellow-font-color'}>{'Home'}</button>
-                        <button className={'yellow-font-color'}>{'Contact Us'}</button>
+                        <button
+                            className={'yellow-font-color'}
+                            onClick={() => history.push('/')}
+                        >
+                            {'Home'}
+                        </button>
+                        <button
+                            className={'yellow-font-color'}
+                            onClick={() => history.push('/contactus')}
+                        >
+                            {'Contact Us'}
+                        </button>
                     </div>
                     <div className={Styles.socialLinks}>
                         <img src={FBLogo} alt={'FB Logo'} />

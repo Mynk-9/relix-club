@@ -114,6 +114,7 @@
             > div {
                 vertical-align: middle;
                 display: inline-block;
+                flex: 1;
 
                 @media screen and (max-width: 768px) {
                     display: block;
@@ -196,6 +197,7 @@
                     .heading1 {
                         text-align: left;
                         line-height: 1.5;
+                        margin-bottom: 0.5rem;
                     }
                     .description {
                         text-align: left;
@@ -222,7 +224,7 @@
                     }
                     .info {
                         background-color: #1e1f2c;
-                        padding: 1rem;
+                        padding: 1.5rem;
 
                         .description {
                             margin: 0;

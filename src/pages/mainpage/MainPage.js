@@ -175,9 +175,13 @@ const MainPage = props => {
                     <div style={{ margin: '-1.5rem 0' }} className={Styles.visibleMobile} />
                     <div style={{ textAlign: 'center' }}>
                         <Fade bottom>
-                            <CommonButton text={'Know More'} onClick={() => {
-                                history.push('/knowmore');
-                            }} />
+                            <CommonButton
+                                text={'Know More'}
+                                onClick={() => {
+                                    history.push('/knowmore');
+                                }}
+                                style={{ marginBottom: '2rem' }}
+                            />
                         </Fade>
                     </div>
                 </div>
@@ -222,7 +226,9 @@ const MainPage = props => {
                             </div>
                         </div>
                         <div className={Styles.visiblePC}>
-                            <img src={TwoMen} alt={''} />
+                            <Fade bottom>
+                                <img src={TwoMen} alt={''} />
+                            </Fade>
                         </div>
                         <div className={Styles.details}>
                             <div
@@ -252,18 +258,19 @@ const MainPage = props => {
             <div className={`${Styles.section} ${Styles.ellipseBgSection}`}>
                 <div className={Styles.content}>
                     <div className={Styles.heading1}>
-                        {/* {'Creator Coin: A way to'}
-                        <br />
-                        {'turbocharge creator’s ecosystem'} */}
-                        {'Turbocharging creators ecosystem'}
+                        <Fade bottom>
+                            {'Turbocharging creators ecosystem'}
+                        </Fade>
                     </div>
                     <div className={Styles.section3content}>
-                        <img
-                            ref={goldCoinRef}
-                            src={Coin}
-                            alt={''}
-                            className={Styles.bigCoin}
-                        />
+                        <Fade bottom>
+                            <img
+                                ref={goldCoinRef}
+                                src={Coin}
+                                alt={''}
+                                className={Styles.bigCoin}
+                            />
+                        </Fade>
                         {/* small cards PC */}
                         <div className={Styles.visiblePC}>
                             <img
@@ -271,10 +278,10 @@ const MainPage = props => {
                                 alt={''}
                                 className={Styles.smallCard}
                                 style={{
-                                    top: fhdScaleMin(187), // 187px
-                                    left: fhdScaleMin(435), // 435px
-                                    height: fhdScaleMin(251), // 251px
-                                    width: fhdScaleMin(215),
+                                    top: fhdScaleMin(187),
+                                    left: fhdScaleMin(435),
+                                    height: fhdScaleMin(288),
+                                    width: fhdScaleMin(216),
                                 }}
                             />
                             <img
@@ -282,10 +289,10 @@ const MainPage = props => {
                                 alt={''}
                                 className={Styles.smallCard}
                                 style={{
-                                    top: fhdScaleMin(451), // 451px
-                                    left: fhdScaleMin(367), // 367px
-                                    height: fhdScaleMin(284), // 284px
-                                    width: fhdScaleMin(215),
+                                    top: fhdScaleMin(500),
+                                    left: fhdScaleMin(370),
+                                    height: fhdScaleMin(288),
+                                    width: fhdScaleMin(216),
                                 }}
                             />
                             <img
@@ -294,9 +301,9 @@ const MainPage = props => {
                                 className={Styles.smallCard}
                                 style={{
                                     top: fhdScaleMin(691),
-                                    left: fhdScaleMin(650),
-                                    height: fhdScaleMin(263),
-                                    width: fhdScaleMin(215),
+                                    left: fhdScaleMin(670),
+                                    height: fhdScaleMin(288),
+                                    width: fhdScaleMin(216),
                                 }}
                             />
                             <img
@@ -304,10 +311,10 @@ const MainPage = props => {
                                 alt={''}
                                 className={Styles.smallCard}
                                 style={{
-                                    top: fhdScaleMin(661),
-                                    right: fhdScaleMin(655),
-                                    height: fhdScaleMin(293),
-                                    width: fhdScaleMin(215),
+                                    top: fhdScaleMin(691),
+                                    right: fhdScaleMin(670),
+                                    height: fhdScaleMin(288),
+                                    width: fhdScaleMin(216),
                                 }}
                             />
                             <img
@@ -315,10 +322,10 @@ const MainPage = props => {
                                 alt={''}
                                 className={Styles.smallCard}
                                 style={{
-                                    top: fhdScaleMin(413),
-                                    right: fhdScaleMin(369),
-                                    height: fhdScaleMin(322),
-                                    width: fhdScaleMin(215),
+                                    top: fhdScaleMin(500),
+                                    right: fhdScaleMin(370),
+                                    height: fhdScaleMin(288),
+                                    width: fhdScaleMin(216),
                                 }}
                             />
                             <img
@@ -326,130 +333,132 @@ const MainPage = props => {
                                 alt={''}
                                 className={Styles.smallCard}
                                 style={{
-                                    top: fhdScaleMin(198),
+                                    top: fhdScaleMin(187),
                                     right: fhdScaleMin(435),
-                                    height: fhdScaleMin(240),
-                                    width: fhdScaleMin(215),
+                                    height: fhdScaleMin(288),
+                                    width: fhdScaleMin(216),
                                 }}
                             />
                         </div>
 
                         {/* Small cards Phone */}
-                        <div
-                            className={`${Styles.horizontalScroll} ${Styles.visibleMobile}`}
-                            style={{
-                                paddingTop: '4rem'
-                            }}
-                        >
-                            <GlassCard
-                                icon={CoinStack}
-                                title={'Economy'}
-                                desc={'Build an economy based on creator’s coin'}
+                        <Fade bottom>
+                            <div
+                                className={`${Styles.horizontalScroll} ${Styles.visibleMobile}`}
                                 style={{
-                                    height: '250px',
-                                    width: '215px',
+                                    paddingTop: '4rem'
                                 }}
-                                titleStyle={{
-                                    fontSize: '1.3rem'
-                                }}
-                                descStyle={{
-                                    fontSize: '0.8rem',
-                                    fontFamily: 'Poppins-XLight',
-                                    lineHeight: '1.5'
-                                }}
-                                iconStyle={{ transform: 'translate(-50%, -5rem)' }}
-                            />
-                            <GlassCard
-                                icon={Juggler}
-                                title={'Community'}
-                                desc={'Create a robust community of super fans'}
-                                style={{
-                                    height: '250px',
-                                    width: '215px',
-                                }}
-                                titleStyle={{
-                                    fontSize: '1.3rem'
-                                }}
-                                descStyle={{
-                                    fontSize: '0.8rem',
-                                    fontFamily: 'Poppins-XLight',
-                                    lineHeight: '1.5'
-                                }}
-                                iconStyle={{ transform: 'translate(-50%, -5rem)' }}
-                            />
-                            <GlassCard
-                                icon={Metrics}
-                                title={'Services'}
-                                desc={'Enable collaboration between creators and fans'}
-                                style={{
-                                    height: '250px',
-                                    width: '215px',
-                                }}
-                                titleStyle={{
-                                    fontSize: '1.3rem'
-                                }}
-                                descStyle={{
-                                    fontSize: '0.8rem',
-                                    fontFamily: 'Poppins-XLight',
-                                    lineHeight: '1.5'
-                                }}
-                                iconStyle={{ transform: 'translate(-50%, -5rem)' }}
-                            />
-                            <GlassCard
-                                icon={PinkPhone}
-                                title={'Launch NFTs'}
-                                desc={'Help creators launch their NFTs'}
-                                style={{
-                                    height: '250px',
-                                    width: '215px',
-                                }}
-                                titleStyle={{
-                                    fontSize: '1.3rem'
-                                }}
-                                descStyle={{
-                                    fontSize: '0.8rem',
-                                    fontFamily: 'Poppins-XLight',
-                                    lineHeight: '1.5'
-                                }}
-                                iconStyle={{ transform: 'translate(-50%, -5rem)' }}
-                            />
-                            <GlassCard
-                                icon={RocketManLarge}
-                                title={'Success'}
-                                desc={'Enable fans to participate in creator’s success'}
-                                style={{
-                                    height: '250px',
-                                    width: '215px',
-                                }}
-                                titleStyle={{
-                                    fontSize: '1.3rem'
-                                }}
-                                descStyle={{
-                                    fontSize: '0.8rem',
-                                    fontFamily: 'Poppins-XLight',
-                                    lineHeight: '1.5'
-                                }}
-                                iconStyle={{ transform: 'translate(-50%, -5rem)' }}
-                            />
-                            <GlassCard
-                                icon={Rewards}
-                                title={'Rewards'}
-                                desc={'Creators can incentivize their super fans'}
-                                style={{
-                                    height: '250px',
-                                    width: '215px',
-                                }}
-                                titleStyle={{
-                                    fontSize: '1.3rem'
-                                }}
-                                descStyle={{
-                                    fontSize: '0.8rem',
-                                    fontFamily: 'Poppins-XLight',
-                                    lineHeight: '1.5'
-                                }}
-                                iconStyle={{ transform: 'translate(-50%, -5rem)' }}
-                            />
-                        </div>
+                            >
+                                <GlassCard
+                                    icon={CoinStack}
+                                    title={'Economy'}
+                                    desc={'Build an economy based on creator’s coin'}
+                                    style={{
+                                        height: '250px',
+                                        width: '215px',
+                                    }}
+                                    titleStyle={{
+                                        fontSize: '1.3rem'
+                                    }}
+                                    descStyle={{
+                                        fontSize: '0.8rem',
+                                        fontFamily: 'Poppins-XLight',
+                                        lineHeight: '1.5'
+                                    }}
+                                    iconStyle={{ transform: 'translate(-50%, -5rem)' }}
+                                />
+                                <GlassCard
+                                    icon={Juggler}
+                                    title={'Community'}
+                                    desc={'Create a robust community of super fans'}
+                                    style={{
+                                        height: '250px',
+                                        width: '215px',
+                                    }}
+                                    titleStyle={{
+                                        fontSize: '1.3rem'
+                                    }}
+                                    descStyle={{
+                                        fontSize: '0.8rem',
+                                        fontFamily: 'Poppins-XLight',
+                                        lineHeight: '1.5'
+                                    }}
+                                    iconStyle={{ transform: 'translate(-50%, -5rem)' }}
+                                />
+                                <GlassCard
+                                    icon={Metrics}
+                                    title={'Services'}
+                                    desc={'Enable collaboration between creators and fans'}
+                                    style={{
+                                        height: '250px',
+                                        width: '215px',
+                                    }}
+                                    titleStyle={{
+                                        fontSize: '1.3rem'
+                                    }}
+                                    descStyle={{
+                                        fontSize: '0.8rem',
+                                        fontFamily: 'Poppins-XLight',
+                                        lineHeight: '1.5'
+                                    }}
+                                    iconStyle={{ transform: 'translate(-50%, -5rem)' }}
+                                />
+                                <GlassCard
+                                    icon={PinkPhone}
+                                    title={'Launch NFTs'}
+                                    desc={'Help creators launch their NFTs'}
+                                    style={{
+                                        height: '250px',
+                                        width: '215px',
+                                    }}
+                                    titleStyle={{
+                                        fontSize: '1.3rem'
+                                    }}
+                                    descStyle={{
+                                        fontSize: '0.8rem',
+                                        fontFamily: 'Poppins-XLight',
+                                        lineHeight: '1.5'
+                                    }}
+                                    iconStyle={{ transform: 'translate(-50%, -5rem)' }}
+                                />
+                                <GlassCard
+                                    icon={RocketManLarge}
+                                    title={'Success'}
+                                    desc={'Enable fans to participate in creator’s success'}
+                                    style={{
+                                        height: '250px',
+                                        width: '215px',
+                                    }}
+                                    titleStyle={{
+                                        fontSize: '1.3rem'
+                                    }}
+                                    descStyle={{
+                                        fontSize: '0.8rem',
+                                        fontFamily: 'Poppins-XLight',
+                                        lineHeight: '1.5'
+                                    }}
+                                    iconStyle={{ transform: 'translate(-50%, -5rem)' }}
+                                />
+                                <GlassCard
+                                    icon={Rewards}
+                                    title={'Rewards'}
+                                    desc={'Creators can incentivize their super fans'}
+                                    style={{
+                                        height: '250px',
+                                        width: '215px',
+                                    }}
+                                    titleStyle={{
+                                        fontSize: '1.3rem'
+                                    }}
+                                    descStyle={{
+                                        fontSize: '0.8rem',
+                                        fontFamily: 'Poppins-XLight',
+                                        lineHeight: '1.5'
+                                    }}
+                                    iconStyle={{ transform: 'translate(-50%, -5rem)' }}
+                                />
+                            </div>
+                        </Fade>
                     </div>
                 </div>
             </div>
@@ -458,48 +467,61 @@ const MainPage = props => {
             <div className={Styles.section}>
                 <div className={Styles.content}>
                     <div className={Styles.heading1}>
-                        {'Here’s how the platform works'}
+                        <Fade bottom>
+                            {'Here’s how the platform works'}
+                        </Fade>
                     </div>
                     <div className={Styles.section4content}>
                         {/* row 1 */}
                         <div className={Styles.row}>
                             <div className={Styles.info}>
                                 <div className={`${Styles.heading1} yellow-font-color`}>
-                                    {'Creator launches coin'}
+                                    <Fade bottom>
+                                        {'Creator launches coin'}
+                                    </Fade>
                                 </div>
                                 <div className={Styles.description}>
-                                    {'Launch their own branded coin powered by blockchain and limited in supply.'}
+                                    <Fade bottom>
+                                        {'Launch their own branded coin powered by blockchain and limited in supply.'}
+                                    </Fade>
                                 </div>
                             </div>
                             <div className={Styles.image}>
-                                <img
-                                    src={Creator}
-                                    alt={'creator'}
-                                    style={{
-                                        height: fhdScaleMin(551),
-                                    }}
-                                />
+                                <Fade right>
+                                    <img
+                                        src={Creator}
+                                        alt={'creator'}
+                                        style={{
+                                            height: fhdScaleMin(551),
+                                        }}
+                                    />
+                                </Fade>
                             </div>
                         </div>
                         {/* row 2 */}
                         <div className={Styles.row}>
                             <div className={Styles.image} style={{ display: 'revert' }}>
-                                <img
-                                    src={FansHand}
-                                    alt={'fan'}
-                                    style={{
-                                        height: fhdScaleMin(600),
-                                        // position: 'relative',
-                                        // transform: 'translateX(calc(-1 * var(--section-padding-horizontal)))',
-                                    }}
-                                />
+                                <Fade left>
+                                    <img
+                                        src={FansHand}
+                                        alt={'fan'}
+                                        style={{
+                                            height: fhdScaleMin(600),
+                                            marginLeft: 'calc(-1 * var(--section-padding-horizontal))',
+                                        }}
+                                    />
+                                </Fade>
                             </div>
                             <div className={Styles.info}>
                                 <div className={`${Styles.heading1} green-font-color`}>
-                                    {'Fans invest in creator'}
+                                    <Fade bottom>
+                                        {'Fans invest in creator'}
+                                    </Fade>
                                 </div>
                                 <div className={Styles.description}>
-                                    {'Fans buy their favorite creator’s coins to participate in creators success and to engage deeply with the creator.'}
+                                    <Fade bottom>
+                                        {'Fans buy their favorite creator’s coins to participate in creators success and engage deeply with the creator.'}
+                                    </Fade>
                                 </div>
                             </div>
                         </div>
@@ -507,40 +529,54 @@ const MainPage = props => {
                         <div className={Styles.row}>
                             <div className={Styles.info}>
                                 <div className={`${Styles.heading1} yellow-font-color`}>
-                                    {'Fans earn exclusive rewards'}<br />{'and build thriving community'}
+                                    <Fade bottom>
+                                        {'Fans earn exclusive rewards & build thriving community'}
+                                    </Fade>
                                 </div>
                                 <div className={Styles.description}>
-                                    {'Creators reward fans with exciting opportunities such as meet & greet, exclusive workshops, chance to collaborate, NFT drops, etc.'}
+                                    <Fade bottom>
+                                        {'Creators reward fans with exciting opportunities such as meet & greet, exclusive workshops, chance to collaborate, NFT drops, etc.'}
+                                    </Fade>
                                 </div>
                             </div>
                             <div className={Styles.image}>
-                                <img
-                                    src={FansCommunity}
-                                    alt={'community'}
-                                    style={{
-                                        height: fhdScaleMin(617),
-                                    }}
-                                />
+                                <Fade right>
+                                    <img
+                                        src={FansCommunity}
+                                        alt={'community'}
+                                        style={{
+                                            height: fhdScaleMin(617),
+                                        }}
+                                    />
+                                </Fade>
                             </div>
                         </div>
                         {/* row 4 */}
                         <div className={Styles.row}>
                             <div className={Styles.image}>
-                                <img
-                                    src={RocketMan}
-                                    alt={'growth'}
-                                    style={{
-                                        height: fhdScaleMin(615),
-                                    }}
-                                />
+                                <Fade left>
+                                    <img
+                                        src={RocketMan}
+                                        alt={'growth'}
+                                        style={{
+                                            height: fhdScaleMin(615),
+                                        }}
+                                    />
+                                </Fade>
                             </div>
                             <div className={Styles.info}>
                                 <div className={`${Styles.heading1} green-font-color`}>
-                                    {'Creators & fans grow together'}
+                                    <Fade bottom>
+                                        {'Creators & fans grow together'}
+                                    </Fade>
                                 </div>
                                 <div className={Styles.description}>
-                                    <p>Creator coin aligns economic incentives between creator and fans and helps strengthen the relationship between them. As more fans come, the value of the creator coin goes up, increasing the overall size of the creator’s economy and benefiting both fans and creators.</p>
-                                    <p>Imagine a new world where fans get an opportunity to be close to their favorite celebrity while having financial gains.</p>
+                                    <Fade bottom>
+                                        <p>{'Creator coin aligns economic incentives between creator and fans and helps strengthen the relationship between them. As more fans invest, the value of the creator coin goes up, increasing the overall size of the creator’s economy and benefiting both fans and creators.'}</p>
+                                    </Fade>
+                                    <Fade bottom>
+                                        <p>{'Imagine a world where fans get engaging proximity to their favourite celebrity while having financial gains.'}</p>
+                                    </Fade>
                                 </div>
                             </div>
                         </div>
@@ -552,10 +588,17 @@ const MainPage = props => {
             <div className={Styles.section} style={{ background: 'none' }}>
                 <div className={Styles.content}>
                     <div className={Styles.heading1}>
-                        {'To know more, join our telegram community'}
+                        <Fade bottom>
+                            {'To know more, join our telegram community'}
+                        </Fade>
                     </div>
                     <div className={Styles.description}>
-                        <CommonButton text={'Join our community'} />
+                        <Fade bottom>
+                            <CommonButton
+                                text={'Join our community'}
+                                onClick={() => history.push('/knowmore')}
+                            />
+                        </Fade>
                     </div>
                 </div>
             </div>
