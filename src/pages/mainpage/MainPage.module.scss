@@ -1,5 +1,18 @@
 @import "./../../components/utilities.scss";
 
+// third section
+.section.ellipseBgSection {
+    background: url("./../../assets/images/elipse.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+
+    @media screen and (max-width: 768px) {
+        background-size: cover;
+        background-position: center -10rem;
+    }
+}
+
 .section {
     position: relative;
     padding: var(--section-padding-vertical) var(--section-padding-horizontal);
@@ -83,7 +96,7 @@
                 @media screen and (max-width: 768px) {
                     padding: 1rem;
                     background-color: #1e1f2c;
-                    border-radius: 2rem;
+                    border-radius: 1rem;
                 }
             }
             .details:last-child {
@@ -197,7 +210,7 @@
 
                     .info::before {
                         display: block;
-                        font-family: 'Poppins-Semi-Bold';
+                        font-family: "Poppins-Semi-Bold";
                         line-height: 1.5;
                     }
                     .info {
