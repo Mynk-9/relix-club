@@ -120,7 +120,7 @@ const MainPage = props => {
                         <CommonButton
                             text={'Join our community'}
                             onClick={() => {
-                                window.open('https://t.me/relixclub', '_blank');
+                                window.open('https://t.me/relix_club', '_blank');
                             }}
                         />
                     </div>
@@ -645,7 +645,7 @@ const MainPage = props => {
                             <CommonButton
                                 text={'Join our community'}
                                 onClick={() => {
-                                    window.open('https://t.me/relixclub', '_blank');
+                                    window.open('https://t.me/relix_club', '_blank');
                                 }}
                             />
                         </Fade>
