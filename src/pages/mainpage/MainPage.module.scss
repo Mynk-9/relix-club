@@ -1,15 +1,16 @@
 @import "./../../components/utilities.scss";
 
-body {
-    background: radial-gradient(
-        232.05% 45.41% at 50% 50%,
-        #1e1f2c 0%,
-        #000000 100%
-    );
-    background-attachment: fixed;
-    background-size: 150%;
-    background-position: center center;
-}
+// body {
+//     background-color: black;
+//     background: radial-gradient(
+//         232.05% 45.41% at 50% 50%,
+//         #1e1f2c 0%,
+//         #000000 100%
+//     );
+//     background-attachment: fixed;
+//     // background-size: 150%;
+//     background-position: center center;
+// }
 
 // third section
 .section.ellipseBgSection {
@@ -28,7 +29,7 @@ body {
     position: relative;
     padding: var(--section-padding-vertical) var(--section-padding-horizontal);
 
-    // background: radial-gradient(50% 50% at 50% 50%, #1e1f2c 0%, #000000 100%);
+    background: radial-gradient(50% 50% at 50% 50%, #1e1f2c 0%, #000000 100%);
 
     .content {
         display: block;
@@ -334,7 +335,8 @@ body {
         .wrapper {
             position: relative;
             background: url("./../../assets/images/elipse.png");
-            background-size: cover;
+            background-size: 150%;
+            background-position: center center;
             margin: -1rem;
 
             .yellowRing {
@@ -347,6 +349,7 @@ body {
                 height: auto;
                 width: 100%;
                 transform: revert;
+                margin-left: 1rem;
 
                 content: url("./../../assets/images/coinbanner-mobile.png");
             }
