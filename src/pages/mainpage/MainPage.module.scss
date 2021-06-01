@@ -1,5 +1,16 @@
 @import "./../../components/utilities.scss";
 
+body {
+    background: radial-gradient(
+        232.05% 45.41% at 50% 50%,
+        #1e1f2c 0%,
+        #000000 100%
+    );
+    background-attachment: fixed;
+    background-size: 150%;
+    background-position: center center;
+}
+
 // third section
 .section.ellipseBgSection {
     background: url("./../../assets/images/elipse.png");
@@ -17,7 +28,7 @@
     position: relative;
     padding: var(--section-padding-vertical) var(--section-padding-horizontal);
 
-    background: radial-gradient(50% 50% at 50% 50%, #1e1f2c 0%, #000000 100%);
+    // background: radial-gradient(50% 50% at 50% 50%, #1e1f2c 0%, #000000 100%);
 
     .content {
         display: block;
@@ -380,6 +391,9 @@
 
             margin-top: 2.5rem;
             margin-top: min(3.7vh, 2.08vw);
+            margin-right: fhdScaleMin(150);
+
+            line-height: 1.5;
 
             @media screen and (max-width: 768px) {
                 margin-top: 1.5rem;

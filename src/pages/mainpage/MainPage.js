@@ -34,6 +34,10 @@ import RocketManLarge from './../../assets/images/rocketman-L.png';
 // import YellowElipse from './../../assets/images/elipse.png';
 import Juggler from './../../assets/images/juggler.png';
 import PinkPhone from './../../assets/images/pinkphone.png'
+import MobileGlassCard1 from './../../assets/images/mobileglasscard1.png';
+import MobileGlassCard2 from './../../assets/images/mobileglasscard2.png';
+import MobileGlassCard3 from './../../assets/images/mobileglasscard3.png';
+import MobileGlassCard4 from './../../assets/images/mobileglasscard4.png';
 
 const MainPage = props => {
     const goldCoinRef = useRef(null);
@@ -108,9 +112,9 @@ const MainPage = props => {
                         <div>you believe in</div>
                     </div>
                     <div className={Styles.brief}>
-                        <div>Building an ecosystem for influencers, super stars, sports</div>
-                        <div>teams and their fans to thrive together through</div>
-                        <div>creator coin</div>
+                        Building an ecosystem for influencers, super stars, sports
+                        teams and their fans to thrive together through
+                        creator coin
                     </div>
                     <div className={Styles.buttonWrapper}>
                         <CommonButton
@@ -148,31 +152,75 @@ const MainPage = props => {
                             </div>
                         </Fade>
                     </div>
-                    <Fade bottom>
-                        <div className={Styles.horizontalScroll}>
-                            <GlassCard
-                                icon={Coin}
-                                title={'Become a part of creators success'}
-                                desc={'Be early and gain financial rewards through creator coins'}
+                    <div className={Styles.visiblePC}>
+                        <Fade bottom>
+                            <div className={Styles.horizontalScroll}>
+                                <GlassCard
+                                    icon={Coin}
+                                    title={'Become a part of creators success'}
+                                    desc={'Be early and gain financial rewards through creator coins'}
+                                />
+                                <GlassCard
+                                    icon={Rewards}
+                                    title={'Earning once in a lifetime rewards'}
+                                    desc={'Chance to meet, gain early access, own digital collectibles and many more unique rewards'}
+                                />
+                                <GlassCard
+                                    icon={Chats}
+                                    title={'Influence decisions'}
+                                    desc={'Help your favorite celebrities in making key life decisions'}
+                                />
+                                <GlassCard
+                                    icon={Metrics}
+                                    title={'Access to exclusive marketplace'}
+                                    desc={'Buy and trade NFTs, avail creator services and collaborate with the creators'}
+                                />
+                            </div>
+                        </Fade>
+                    </div>
+                    <div className={Styles.visibleMobile}>
+                        <Fade bottom>
+                            <img
+                                src={MobileGlassCard1}
+                                alt={''}
+                                style={{
+                                    width: 'calc(100%)',
+                                    marginBottom: '1rem',
+                                }}
                             />
-                            <GlassCard
-                                icon={Rewards}
-                                title={'Earning once in a lifetime rewards'}
-                                desc={'Chance to meet, gain early access, own digital collectibles and many more unique rewards'}
+                        </Fade>
+                        <Fade bottom>
+                            <img
+                                src={MobileGlassCard2}
+                                alt={''}
+                                style={{
+                                    width: '100%',
+                                    marginBottom: '1rem',
+                                }}
                             />
-                            <GlassCard
-                                icon={Chats}
-                                title={'Influence decisions'}
-                                desc={'Help your favorite celebrities in making key life decisions'}
+                        </Fade>
+                        <Fade bottom>
+                            <img
+                                src={MobileGlassCard3}
+                                alt={''}
+                                style={{
+                                    width: '100%',
+                                    marginBottom: '1rem',
+                                }}
                             />
-                            <GlassCard
-                                icon={Metrics}
-                                title={'Access to exclusive marketplace'}
-                                desc={'Buy and trade NFTs, avail creator services and collaborate with the creators'}
+                        </Fade>
+                        <Fade bottom>
+                            <img
+                                src={MobileGlassCard4}
+                                alt={''}
+                                style={{
+                                    width: '100%',
+                                    // marginBottom: '1rem',
+                                }}
                             />
-                        </div>
-                    </Fade>
-                    <div style={{ margin: '-1.5rem 0' }} className={Styles.visibleMobile} />
+                        </Fade>
+                    </div>
+                    {/* <div style={{ margin: '-1.5rem 0' }} className={Styles.visibleMobile} /> */}
                     <div style={{ textAlign: 'center' }}>
                         <Fade bottom>
                             <CommonButton
@@ -596,7 +644,9 @@ const MainPage = props => {
                         <Fade bottom>
                             <CommonButton
                                 text={'Join our community'}
-                                onClick={() => history.push('/knowmore')}
+                                onClick={() => {
+                                    window.open('https://t.me/relixclub', '_blank');
+                                }}
                             />
                         </Fade>
                     </div>

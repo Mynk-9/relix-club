@@ -54,7 +54,8 @@
                 font-family: "Poppins-Semi-Bold";
 
                 @media screen and (max-width: 768px) {
-                    font-size: 1rem;
+                    font-size: 1.8rem;
+                    margin-bottom: 1rem;
                 }
             }
             div.description {
@@ -63,7 +64,7 @@
                 margin-top: fhdScaleMin(27);
 
                 @media screen and (max-width: 768px) {
-                    font-size: 0.7rem;
+                    font-size: 0.8rem;
                     margin: 0;
                 }
             }
@@ -75,6 +76,12 @@
             @media screen and (max-width: 768px) {
                 height: auto;
                 width: 50%;
+            }
+        }
+        img.exceptionImages {
+            @media screen and (max-width: 768px) {
+                height: auto;
+                width: 70%;
             }
         }
     }

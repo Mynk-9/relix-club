@@ -60,6 +60,8 @@
         font-family: "Halvar Breitschrift Medium";
         font-weight: lighter;
 
+        cursor: pointer;
+
         @media screen and (max-width: 768px) {
             font-size: 1rem;
         }
