@@ -26,17 +26,17 @@ const Footer = props => {
                 <div className={Styles.links}>
                     <div className={Styles.websiteLinks} style={{ marginBottom: 0 }}>
                         <button
-                            className={'yellow-font-color'}
+                            className={`yellow-font-color ${Styles.button}`}
                             onClick={() => history.push('/')}
                         >
                             {'Home'}
                         </button>
-                        <button
-                            className={'yellow-font-color'}
-                            onClick={() => history.push('/contactus')}
+                        <a
+                            className={`yellow-font-color ${Styles.button}`}
+                            href={'mailto:contact@relix.club'}
                         >
                             {'Contact Us'}
-                        </button>
+                        </a>
                     </div>
                     {/* <div className={Styles.socialLinks}>
                         <img src={FBLogo} alt={'FB Logo'} />

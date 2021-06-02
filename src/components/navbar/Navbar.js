@@ -32,9 +32,12 @@ const Navbar = props => {
             <div className={Styles.links} data-visible={navOpen}>
                 <span><Link to={'/'} onClick={() => setNavOpen(!navOpen)}>{'Home'}</Link></span>
                 <span>
-                    <Link to={'/contactus'} onClick={() => setNavOpen(!navOpen)}>
+                    <a
+                        href={'mailto:contact@relix.club'}
+                        onClick={(e) => setNavOpen(!navOpen)}
+                    >
                         {'Contact Us'}
-                    </Link>
+                    </a>
                 </span>
             </div>
         </nav>
