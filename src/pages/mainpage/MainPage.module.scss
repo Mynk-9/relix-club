@@ -29,7 +29,7 @@
     position: relative;
     padding: var(--section-padding-vertical) var(--section-padding-horizontal);
 
-    background: radial-gradient(50% 50% at 50% 50%, #1e1f2c 0%, #000000 100%);
+    // background: radial-gradient(50% 50% at 50% 50%, #1e1f2c 0%, #000000 100%);
 
     .content {
         display: block;
@@ -326,6 +326,12 @@
         }
     }
 }
+.section:nth-child(2n + 1) {
+    background-color: #161622;
+}
+.section:nth-child(2n) {
+    background-color: #0a0a0f;
+}
 .heroSection {
     height: 100vh;
     padding-top: var(--section-hero-padding-top);
@@ -528,7 +534,7 @@
     padding-top: 5rem;
 
     @media screen and (max-width: 768px) {
-        padding-top: 0;
+        padding-top: var(--section-padding-vertical);
     }
 }
 
