@@ -3,12 +3,12 @@ import { useHistory } from 'react-router';
 import Styles from './Footer.module.scss';
 
 import Logo from './../../assets/images/logo.svg';
-import FBLogo from './../../assets/images/fb-logo.png';
-import InstagramLogo from './../../assets/images/insta-logo.png';
-import LinkedInLogo from './../../assets/images/linkedin-logo.png';
-import TwitterLogo from './../../assets/images/twitter-logo.png';
-import TelegramLogo from './../../assets/images/telegram-logo.png';
-import YouTubeLogo from './../../assets/images/yt-logo.png';
+// import FBLogo from './../../assets/images/fb-logo.png';
+// import InstagramLogo from './../../assets/images/insta-logo.png';
+// import LinkedInLogo from './../../assets/images/linkedin-logo.png';
+// import TwitterLogo from './../../assets/images/twitter-logo.png';
+// import TelegramLogo from './../../assets/images/telegram-logo.png';
+// import YouTubeLogo from './../../assets/images/yt-logo.png';
 
 const Footer = props => {
     const thisYear = (new Date()).getFullYear();
