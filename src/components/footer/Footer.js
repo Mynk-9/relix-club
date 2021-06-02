@@ -24,7 +24,7 @@ const Footer = props => {
                     <span>{'club'}</span>
                 </div>
                 <div className={Styles.links}>
-                    <div className={Styles.websiteLinks}>
+                    <div className={Styles.websiteLinks} style={{ marginBottom: 0 }}>
                         <button
                             className={'yellow-font-color'}
                             onClick={() => history.push('/')}
@@ -38,14 +38,14 @@ const Footer = props => {
                             {'Contact Us'}
                         </button>
                     </div>
-                    <div className={Styles.socialLinks}>
+                    {/* <div className={Styles.socialLinks}>
                         <img src={FBLogo} alt={'FB Logo'} />
                         <img src={InstagramLogo} alt={'Instagram Logo'} />
                         <img src={LinkedInLogo} alt={'Instagram Logo'} />
                         <img src={TwitterLogo} alt={'Twitter Logo'} />
                         <img src={TelegramLogo} alt={'Telegram Logo'} />
                         <img src={YouTubeLogo} alt={'YouTube Logo'} />
-                    </div>
+                    </div> */}
                 </div>
             </div>
             <div className={Styles.notices}>
