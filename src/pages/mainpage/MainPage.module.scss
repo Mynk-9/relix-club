@@ -29,7 +29,7 @@
     position: relative;
     padding: var(--section-padding-vertical) var(--section-padding-horizontal);
 
-    // background: radial-gradient(50% 50% at 50% 50%, #1e1f2c 0%, #000000 100%);
+    background: radial-gradient(50% 50% at 50% 50%, #1e1f2c 0%, #000000 100%);
 
     .content {
         display: block;
@@ -327,10 +327,14 @@
     }
 }
 .section:nth-child(2n + 1) {
-    background-color: #161622;
+    @media screen and (max-width: 768px) {
+        background: #161622;
+    }
 }
 .section:nth-child(2n) {
-    background-color: #0a0a0f;
+    @media screen and (max-width: 768px) {
+        background: #0a0a0f;
+    }
 }
 .heroSection {
     height: 100vh;
