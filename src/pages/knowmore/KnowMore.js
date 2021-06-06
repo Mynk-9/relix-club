@@ -2,15 +2,15 @@ import React from 'react';
 import Fade from 'react-reveal';
 import Styles from './KnowMore.module.scss';
 
-import CoinSmall from './../../assets/images/coinsmall.png';
-import PlayIcon from './../../assets/images/playbutton.png';
-import LetterIcon from './../../assets/images/letter.png';
-import FansCommunityIcon from './../../assets/images/fanscommunity-L.png';
-import NFTIcon from './../../assets/images/gallery.png';
-import GoldenKeyIcon from './../../assets/images/goldenkey.png';
-import GamesIcon from './../../assets/images/gamecontroller.png';
-import ServicesIcon from './../../assets/images/services.png';
-import TwoBoys from './../../assets/images/twoboys.png';
+import CoinSmall from './../../assets/images/coinsmall.webp';
+import PlayIcon from './../../assets/images/playbutton.webp';
+import LetterIcon from './../../assets/images/letter.webp';
+import FansCommunityIcon from './../../assets/images/fanscommunity-L.webp';
+import NFTIcon from './../../assets/images/gallery.webp';
+import GoldenKeyIcon from './../../assets/images/goldenkey.webp';
+import GamesIcon from './../../assets/images/gamecontroller.webp';
+import ServicesIcon from './../../assets/images/services.webp';
+import TwoBoys from './../../assets/images/twoboys.webp';
 import Footer from '../../components/footer/Footer';
 
 const KnowMore = props => {

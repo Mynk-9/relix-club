@@ -7,37 +7,37 @@ import CommonButton from '../../components/commonbutton/CommonButton';
 import GlassCard from '../../components/glasscard/GlassCard';
 import Footer from '../../components/footer/Footer';
 
-import CoinBanner from './../../assets/images/combined-coinbanner.png';
+import CoinBanner from './../../assets/images/combined-coinbanner.webp';
 // import YellowRing from './../../assets/images/group-back-ring.svg';
-import HeroCard1 from './../../assets/images/hero-card-1.png';
-import HeroCard2 from './../../assets/images/hero-card-2.png';
-import HeroCard3 from './../../assets/images/hero-card-3.png';
+import HeroCard1 from './../../assets/images/hero-card-1.webp';
+import HeroCard2 from './../../assets/images/hero-card-2.webp';
+import HeroCard3 from './../../assets/images/hero-card-3.webp';
 import ScrollDownVec from './../../assets/images/scroll-down-vec.svg';
-import Coin from './../../assets/images/coin.png';
-import CoinStack from './../../assets/images/coinstack-L.png'
-import Rewards from './../../assets/images/rewards.png';
-import Chats from './../../assets/images/chats.png';
-import Metrics from './../../assets/images/metrics.png';
-import TwoMen from './../../assets/images/twomen.png';
-import TwoMenCropped from './../../assets/images/twomencropped.png';
-import SmallCard1 from './../../assets/images/smallcard1.png';
-import SmallCard2 from './../../assets/images/smallcard2.png';
-import SmallCard3 from './../../assets/images/smallcard3.png';
-import SmallCard4 from './../../assets/images/smallcard4.png';
-import SmallCard5 from './../../assets/images/smallcard5.png';
-import SmallCard6 from './../../assets/images/smallcard6.png';
-import Creator from './../../assets/images/creator.png';
-import FansHand from './../../assets/images/fanshand.png';
-import FansCommunity from './../../assets/images/fanscommunity.png';
-import RocketMan from './../../assets/images/rocketman.png';
-import RocketManLarge from './../../assets/images/rocketman-L.png';
-// import YellowElipse from './../../assets/images/elipse.png';
-import Juggler from './../../assets/images/juggler.png';
-import PinkPhone from './../../assets/images/pinkphone.png'
-import MobileGlassCard1 from './../../assets/images/mobileglasscard1.png';
-import MobileGlassCard2 from './../../assets/images/mobileglasscard2.png';
-import MobileGlassCard3 from './../../assets/images/mobileglasscard3.png';
-import MobileGlassCard4 from './../../assets/images/mobileglasscard4.png';
+import Coin from './../../assets/images/coin.webp';
+import CoinStack from './../../assets/images/coinstack-L.webp'
+import Rewards from './../../assets/images/rewards.webp';
+import Chats from './../../assets/images/chats.webp';
+import Metrics from './../../assets/images/metrics.webp';
+import TwoMen from './../../assets/images/twomen.webp';
+import TwoMenCropped from './../../assets/images/twomencropped.webp';
+import SmallCard1 from './../../assets/images/smallcard1.webp';
+import SmallCard2 from './../../assets/images/smallcard2.webp';
+import SmallCard3 from './../../assets/images/smallcard3.webp';
+import SmallCard4 from './../../assets/images/smallcard4.webp';
+import SmallCard5 from './../../assets/images/smallcard5.webp';
+import SmallCard6 from './../../assets/images/smallcard6.webp';
+import Creator from './../../assets/images/creator.webp';
+import FansHand from './../../assets/images/fanshand.webp';
+import FansCommunity from './../../assets/images/fanscommunity.webp';
+import RocketMan from './../../assets/images/rocketman.webp';
+import RocketManLarge from './../../assets/images/rocketman-L.webp';
+// import YellowEllipse from './../../assets/images/elipse.webp';
+import Juggler from './../../assets/images/juggler.webp';
+import PinkPhone from './../../assets/images/pinkphone.webp'
+import MobileGlassCard1 from './../../assets/images/mobileglasscard1.webp';
+import MobileGlassCard2 from './../../assets/images/mobileglasscard2.webp';
+import MobileGlassCard3 from './../../assets/images/mobileglasscard3.webp';
+import MobileGlassCard4 from './../../assets/images/mobileglasscard4.webp';
 
 const MainPage = props => {
     const goldCoinRef = useRef(null);
@@ -98,7 +98,6 @@ const MainPage = props => {
             {/* Hero Section */}
             <div className={`${Styles.section} ${Styles.heroSection}`} ref={heroSectionRef}>
                 <div className={Styles.wrapper}>
-                    {/* <img className={Styles.yellowRing} src={YellowElipse} alt={''} /> */}
                     <img className={Styles.coinBanner} src={CoinBanner} alt={'Coin Banner'} />
 
                     <img className={Styles.heroCard} data-number={1} src={HeroCard1} alt={''} />

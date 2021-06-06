@@ -14,7 +14,7 @@
 
 // third section
 .section.ellipseBgSection {
-    background: url("./../../assets/images/elipse.png");
+    background-image: url('./../../assets/images/elipse.webp');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 100%;
@@ -362,7 +362,7 @@
                 transform: revert;
                 margin-left: 1rem;
 
-                content: url("./../../assets/images/coinbanner-mobile.png");
+                content: url("./../../assets/images/coinbanner-mobile.webp");
             }
         }
     }
