@@ -117,9 +117,9 @@ const MainPage = props => {
                     </div>
                     <div className={Styles.buttonWrapper}>
                         <CommonButton
-                            text={'Join our community'}
+                            text={'Launch your token'}
                             onClick={() => {
-                                window.open('https://telegram.me/relix_club', '_blank');
+                                window.open('https://form.jotform.com/211592496740461', '_blank');
                             }}
                         />
                     </div>
