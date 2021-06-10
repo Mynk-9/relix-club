@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { useHistory } from 'react-router';
 import Styles from './MainPage.module.scss';
-import Fade from 'react-reveal';
+import Fade from 'react-reveal/Fade';
 
 import CommonButton from '../../components/commonbutton/CommonButton';
 import GlassCard from '../../components/glasscard/GlassCard';
